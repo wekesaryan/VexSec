@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintaining Access</title>
+        <!-- Prism CSS theme -->
+        <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+        
+        <!-- Prism core + language support -->
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!--Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <img src="assets/icons/menu.svg" alt="Menu Icon">
+        </div>
+
+        <!-- Topics Section -->
+        <div class="left-column" id="left-column">
+            <div class="home-button">
+                <a href="index.html" title="Go to Home">
+                    <img src="assets/icons/home.ico" alt="Home" class="home-icon">
+                </a>
+            </div>
+
+            <h2>Navigation Topics</h2>
+            <ul class="topics-list">
+                <li><a href="0Intro.html">Introduction to Cyber Security</a></li>
+                <li><a href="1Reconnaissance.html">Reconnaissance(Info gathering) Phase</a></li>
+                <li><a href="2scanning.html">Scanning Phase</a></li>
+                <li><a href="3Gaining_Access.html">Gaining Access Phase</a></li>
+                <li><a href="4Maintaining_Access.html">Maintaining Access</a></li>
+                <li><a href="5Clearing_Tracks.html">Clearing Tracks</a></li>
+                <li><a href="6Analysis_and_Reporting.html">Analysis and Reporting</a></li>
+                <li><a href="AI_tools.html">Cyber security with AI & ML</a></li>
+                <li><a href="Bug-bounty-hunting.html">Bug Bounty Hunting</a></li>
+                <li><a href="cryptography.html">Cryptography</a></li>
+                <li><a href="CTF_challenges.html">Capture The Flag(CTF) Challenges</a></li>
+                <li><a href="dfir.html">Digital Forensics & Incident Response (DFIR)</a></li>
+                <li><a href="Malware_analysis.html">Malware Analysis</a></li>
+                <li><a href="post_exploitation.html">Post Exploitation Phase</a></li>
+                <li><a href="Reverse_engineering.html">Reverse Engineering</a></li>
+            </ul>
+        </div>
+
+        <!-- Book Content Section -->
+        <div class="right-column" id="" right-column>
+            <div class="page" id="book-page">
+                <div class="book-content" id="book-content">
+                    <h2>maintaining Access Phase</h2>
+
+
+                    <h1 id="comming-soon">Comming Soon!!!</h1>
+
+                    <p>Use the navigation buttons below to move between pages.</p>
+                    <div class="book-navigation">
+                        <button class="prev-page" data-prev-page="3Gaining_Access.html">
+                            <img src="assets/icons/previous_page.ico" alt="Previous" class="icon"> Previous Page
+                        </button>
+                        <button class="top-page" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                            <img src="assets/icons/back-to-top.svg" alt="Top" class="icon"> Top
+                        </button>
+                        <button class="next-page" data-next-page="5Clearing_Tracks.html">
+                            Next Page <img src="assets/icons/nextpage.ico" alt="Next" class="icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        //Hide menu on clicking outside the left-column
+        const leftColumn = document.getElementById('left-column');
+        const rightColumn = document.getElementById('right-column');
+
+        function toggleMenu() {
+            leftColumn.classList.toggle('active');
+        }
+
+        rightColumn.addEventListener('click', () => {
+            // Only hide if screen is mobile size and menu is open
+            if (window.innerWidth <= 768 && leftColumn.classList.contains('active')) {
+                leftColumn.classList.remove('active');
+            }
+        });
+    </script>
+
+    <script>
+        const bookPage = document.getElementById("book-page");
+        const bookContent = document.getElementById("book-content");
+
+        function loadPage(targetPage, direction) {
+            const flipClass = direction === 'next' ? 'flip-forward' : 'flip-backward';
+
+            bookPage.classList.add(flipClass);
+
+            setTimeout(() => {
+                fetch(targetPage)
+                    .then(response => response.text())
+                    .then(data => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(data, 'text/html');
+                        const newContent = doc.getElementById("book-content").innerHTML;
+
+                        bookContent.innerHTML = newContent;
+                        bookPage.classList.remove(flipClass);
+                    });
+            }, 600); // wait for animation
+        }
+
+        document.querySelector(".next-page").addEventListener("click", function () {
+            loadPage(this.dataset.nextPage, 'next');
+        });
+
+        document.querySelector(".prev-page").addEventListener("click", function () {
+            loadPage(this.dataset.prevPage, 'prev');
+        });
+    </script>
+
+    <script>
+        function copyCode(btn) {
+            const code = btn.parentElement.querySelector('code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                btn.innerText = "Copied!";
+                setTimeout(() => btn.innerText = "Copy", 1500);
+            });
+        }
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security</title>
+    <!-- Prism CSS theme -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <!-- Prism core + language support -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <img src="assets/icons/menu.svg" alt="Menu Icon">
+        </div>
+
+
+        <!-- Topics Section -->
+        <div class="left-column" id="left-column">
+            <div class="home-button">
+                <a href="../index.html" title="Go to Home">
+                    <img src="../assets/icons/home.ico" alt="Home" class="home-icon">
+                </a>
+            </div>
+
+            <h2>Navigation Topics</h2>
+            <ul class="topics-list">
+                <li>Topic 1</li>
+                <li>Topic 2</li>
+                <li>Topic 3</li>
+                <li>Topic 4</li>
+                <li>Topic 4</li>
+                <li>Topic 5</li>
+                <li>Topic 6</li>
+            </ul>
+        </div>
+
+        <!-- Book Content Section -->
+        <div class="right-column" id="right-column">
+            <div class="page" id="book-page">
+                <div class="book-content" id="book-content">
+                    <h2>Book Name</h2>
+                    <p>Welcome to the book. This section contains detailed information...</p>
+
+                    <h2>Sub topic 1</h2>
+                    <h2>Sub topic 2</h2>
+
+                    <p>Use the navigation buttons below to move between pages.</p>
+                    <div class="book-navigation">
+                        <button class="prev-page" data-prev-page="404.html">
+                            <img src="assets/icons/previous_page.ico" alt="Previous" class="icon"> Previous Page
+                        </button>
+                        <button class="top-page" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                            <img src="assets/icons/back-to-top.svg" alt="Top" class="icon"> Top
+                        </button>
+                        <button class="next-page" data-next-page="404.html">
+                            Next Page <img src="assets/icons/nextpage.ico" alt="Next" class="icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        //Hide menu on clicking outside the left-column
+        const leftColumn = document.getElementById('left-column');
+        const rightColumn = document.getElementById('right-column');
+
+        function toggleMenu() {
+            leftColumn.classList.toggle('active');
+        }
+
+        rightColumn.addEventListener('click', () => {
+            // Only hide if screen is mobile size and menu is open
+            if (window.innerWidth <= 768 && leftColumn.classList.contains('active')) {
+                leftColumn.classList.remove('active');
+            }
+        });
+    </script>
+
+    <script>
+        const bookPage = document.getElementById("book-page");
+        const bookContent = document.getElementById("book-content");
+
+        function loadPage(targetPage, direction) {
+            const flipClass = direction === 'next' ? 'flip-forward' : 'flip-backward';
+
+            bookPage.classList.add(flipClass);
+
+            setTimeout(() => {
+                fetch(targetPage)
+                    .then(response => response.text())
+                    .then(data => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(data, 'text/html');
+                        const newContent = doc.getElementById("book-content").innerHTML;
+
+                        bookContent.innerHTML = newContent;
+                        bookPage.classList.remove(flipClass);
+                    });
+            }, 600); // wait for animation
+        }
+
+        document.querySelector(".next-page").addEventListener("click", function () {
+            loadPage(this.dataset.nextPage, 'next');
+        });
+
+        document.querySelector(".prev-page").addEventListener("click", function () {
+            loadPage(this.dataset.prevPage, 'prev');
+        });
+    </script>
+
+    <script>
+        function copyCode(btn) {
+            const code = btn.parentElement.querySelector('code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                btn.innerText = "Copied!";
+                setTimeout(() => btn.innerText = "Copy", 1500);
+            });
+        }
+    </script>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

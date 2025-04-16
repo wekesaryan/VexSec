@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanning</title>
+    <!-- Prism CSS theme -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <!-- Prism core + language support -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <img src="assets/icons/menu.svg" alt="Menu Icon">
+        </div>
+
+        <!-- Topics Section -->
+        <div class="left-column" id="left-column">
+            <div class="home-button">
+                <a href="index.html" title="Go to Home">
+                    <img src="assets/icons/home.ico" alt="Home" class="home-icon">
+                </a>
+            </div>
+
+            <ul class="topics-list">
+                <li><a href="0Intro.html">Introduction to Cyber Security</a></li>
+                <li><a href="1Reconnaissance.html">Reconnaissance(Info gathering) Phase</a></li>
+                <li><a href="2scanning.html">Scanning Phase</a></li>
+                <li><a href="3Gaining_Access.html">Gaining Access Phase</a></li>
+                <li><a href="4Maintaining_Access.html">Maintaining Access</a></li>
+                <li><a href="5Clearing_Tracks.html">Clearing Tracks</a></li>
+                <li><a href="6Analysis_and_Reporting.html">Analysis and Reporting</a></li>
+                <li><a href="AI_tools.html">Cyber security with AI & ML</a></li>
+                <li><a href="Bug-bounty-hunting.html">Bug Bounty Hunting</a></li>
+                <li><a href="cryptography.html">Cryptography</a></li>
+                <li><a href="CTF_challenges.html">Capture The Flag(CTF) Challenges</a></li>
+                <li><a href="dfir.html">Digital Forensics & Incident Response (DFIR)</a></li>
+                <li><a href="Malware_analysis.html">Malware Analysis</a></li>
+                <li><a href="post_exploitation.html">Post Exploitation Phase</a></li>
+                <li><a href="Reverse_engineering.html">Reverse Engineering</a></li>
+            </ul>
+        </div>
+
+        <!-- Book Content Section -->
+        <div class="right-column" id="right-column">
+            <div class="page" id="book-page">
+                <div class="book-content" id="book-content">
+
+                    <p>The scanning phase is a crucial step in the ethical hacking process, which involves identifying
+                        potential vulnerabilities in a target system or network.</p>
+                    <p>The goal of the scanning phase is to gather information about the
+                        target system or network, which can then be used to identify potential
+                        vulnerabilities and plan the next steps in the ethical hacking
+                        process.</p>
+                    <h3 id="types-of-scanning">Types of scanning</h3>
+                    <ol type="1">
+                        <li>Network scanning</li>
+                        <li>Vulnerability scanning</li>
+                        <li>Port scanning</li>
+                        <li>Sniffing</li>
+                    </ol>
+                    <h3 id="target-information">Target information</h3>
+                    <ul>
+                        <li>IP addresses.</li>
+                        <li>Type of Operating system used.</li>
+                        <li>Open ports</li>
+                        <li>Running services</li>
+                        <li>Active Hosts</li>
+                    </ul>
+                    <h3 id="what-can-i-do-with-ip-address">What can an attacker do with your IP address </h3>
+                    <ol type="1">
+                        <li>Get system &amp; network informatiion</li>
+                    </ol>
+                    <ul>
+                        <li>sysinfo, OS detection, Ports, Services </li>
+                    </ul>
+                    <ol start="2" type="1">
+                        <li>Vulnerabilities scan</li>
+                        <li>Track geolocation</li>
+                    </ol>
+                    <ul>
+                        <li>IP gelocator - latitude, longitude, map</li>
+                    </ul>
+                    <ol start="4" type="1">
+                        <li>Retrieve personal information </li>
+                    </ol>
+                    <ul>
+                        <li>webcam capture, remote desktop, Logs</li>
+                    </ul>
+                    <ol start="5" type="1">
+                        <li>MITM attack </li>
+                    </ol>
+                    <h1 id="network-scanningip-addresses-os">Network scanning(IP addresses,
+                        OS)</h1>
+                    <p>📌Threat Model: Where is the attacker</p>
+                    <p>📌Threat Surface: What can the attacker reach</p>
+                    <h3 id="network-scannning-tools">Network scannning tools</h3>
+                    <ul>
+                        <li>
+                            <p>Nmap</p>
+                        </li>
+                        <li>
+                            <p>Wireshark</p>
+                        </li>
+                        <li>
+                            <p>Angry IP scanner</p>
+                        </li>
+                        <li>
+                            <p>Aircrack-ng</p>
+                            <pre><code> $nmap -sV 192.168.100.70</code></pre>
+                        </li>
+                    </ul>
+                    <h3 id="types-of-nmap-scans">Types of NMap scans</h3>
+                    <ul>
+                        <li>
+                            <p>TCP connect scan(-sT)</p>
+                        </li>
+                        <li>
+                            <p>SYN scans(-sS) - stealthier</p>
+                        </li>
+                        <li>
+                            <p>UDP Scans(-sU) - fire &amp; forget</p>
+                            <pre><code> p =&gt; port
+ sV =&gt; service versions 
+ A =&gt; OS type, version, script scan 
+ O =&gt; remote OS detection </code></pre>
+                            <p> </p>
+                        </li>
+                    </ul>
+                    <h3 id="stay-anonymous">Stay Anonymous</h3>
+                    <ol type="1">
+                        <li>VPN services </li>
+                        <li>Proxy server </li>
+                        <li>Tor browser</li>
+                        <li>DNS server</li>
+                    </ol>
+                    <p>   </p>
+                    <hr />
+                    <p># Vulnerability scanning.</p>
+                    <ul>
+                        <li>
+                            <p>Acunetix</p>
+                        </li>
+                        <li>
+                            <p>dnscan</p>
+                        </li>
+                        <li>
+                            <p>Knockpy</p>
+                        </li>
+                        <li>
+                            <p><a href="https://any.run">Malware analysis sandbox </a></p>
+                        </li>
+                        <li>
+                            <p>massdns </p>
+                        </li>
+                        <li>
+                            <p>OpenVAS</p>
+                        </li>
+                        <li>
+                            <p>Nikto</p>
+                        </li>
+                        <li>
+                            <p>Netcat</p>
+                        </li>
+                        <li>
+                            <p>NeXpose</p>
+                        </li>
+                        <li>
+                            <p>Nessus</p>
+                        </li>
+                        <li>
+                            <p><a href="virustotal.com">Virus total</a>  </p>
+                            <pre><code>$nc 192.168.1.203 80</code></pre>
+                        </li>
+                    </ul>
+                    <hr />
+                    <h1 id="port-scanningports-services.">Port scanning(ports,
+                        services).</h1>
+                    <p>  ### Port scanning Tools</p>
+                    <ul>
+                        <li>
+                            <p>Angry IP scanner</p>
+                        </li>
+                        <li>
+                            <p>Nmap</p>
+                        </li>
+                        <li>
+                            <p>Masscan</p>
+                        </li>
+                        <li>
+                            <p>Wireshark</p>
+                            <pre><code>$nmap -sT -p 1-1024 &lt;target_ip&gt;</code></pre>
+                        </li>
+                    </ul>
+                    <p>📌 If the target has no vulnerabilities, create the
+                        vulnerability.</p>
+                    <hr />
+                    <h1 id="sniffinganalyze-captured-traffic.">Sniffing(Analyze captured
+                        traffic).</h1>
+                    <p>Is the process of capturing and analyzing network traffic. </p>
+                    <h3 id="sniffing-tools">Sniffing Tools </h3>
+                    <ol type="1">
+                        <li>Steel central packet analyzer </li>
+                        <li>Capsa network analyzer </li>
+                        <li>Omnipeek</li>
+                        <li>Sniffer wicsp</li>
+                        <li>Face niff</li>
+                    </ol>
+                    <h2 id="vulnerable-network-protocols">Vulnerable network protocols </h2>
+                    <ol type="1">
+                        <li>Telnet port 23 - keystrokes </li>
+                        <li>HTTP 80 - data</li>
+                        <li>IMAP - password &amp; data</li>
+                        <li>FTP port 44- password &amp; data</li>
+                        <li>SMTP- password &amp; data</li>
+                        <li>IMAP - password &amp; data</li>
+                        <li>POP - password &amp; data</li>
+                    </ol>
+                    <hr />
+                    <h1 id="userful-references">Userful references</h1>
+                    <h2 id="books">Books</h2>
+
+                    <h2 id="videos-and-tutorials">Videos and tutorials</h2>
+
+                    <h3 id="websites">Websites</h3>
+                    <ul>
+                        <li><a href="https://nmap.org/docs.html">Nmap documentaion</a></li>
+                    </ul>
+
+                    <!----------------Bottom Navigation Page ------------------->
+
+                    <p>Use the navigation buttons below to move between pages.</p>
+                    <div class="book-navigation">
+                        <button class="prev-page" data-prev-page="1Reconnaissance.html">
+                            <img src="assets/icons/previous_page.ico" alt="Previous" class="icon"> Previous Page
+                        </button>
+                        <button class="top-page" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                            <img src="assets/icons/back-to-top.svg" alt="Top" class="icon"> Top
+                        </button>
+                        <button class="next-page" data-next-page="3Gaining_Access.html">
+                            Next Page <img src="assets/icons/nextpage.ico" alt="Next" class="icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //Hide menu on clicking outside the left-column
+        const leftColumn = document.getElementById('left-column');
+        const rightColumn = document.getElementById('right-column');
+
+        function toggleMenu() {
+            leftColumn.classList.toggle('active');
+        }
+
+        rightColumn.addEventListener('click', () => {
+            // Only hide if screen is mobile size and menu is open
+            if (window.innerWidth <= 768 && leftColumn.classList.contains('active')) {
+                leftColumn.classList.remove('active');
+            }
+        });
+    </script>
+
+    <script>
+        const bookPage = document.getElementById("book-page");
+        const bookContent = document.getElementById("book-content");
+
+        function loadPage(targetPage, direction) {
+            const flipClass = direction === 'next' ? 'flip-forward' : 'flip-backward';
+
+            bookPage.classList.add(flipClass);
+
+            setTimeout(() => {
+                fetch(targetPage)
+                    .then(response => response.text())
+                    .then(data => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(data, 'text/html');
+                        const newContent = doc.getElementById("book-content").innerHTML;
+
+                        bookContent.innerHTML = newContent;
+                        bookPage.classList.remove(flipClass);
+                    });
+            }, 600); // wait for animation
+        }
+
+        document.querySelector(".next-page").addEventListener("click", function () {
+            loadPage(this.dataset.nextPage, 'next');
+        });
+
+        document.querySelector(".prev-page").addEventListener("click", function () {
+            loadPage(this.dataset.prevPage, 'prev');
+        });
+    </script>
+
+    <script>
+        function copyCode(btn) {
+            const code = btn.parentElement.querySelector('code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                btn.innerText = "Copied!";
+                setTimeout(() => btn.innerText = "Copy", 1500);
+            });
+        }
+    </script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

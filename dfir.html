@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Title</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <img src="assets/icons/menu.svg" alt="Menu Icon">
+        </div>
+        <!-- Topics Section -->
+        <div class="left-column" id="left-column">
+            <div class="home-button">
+                <a href="index.html" title="Go to Home">
+                    <img src="assets/icons/home.ico" alt="Home" class="home-icon">
+                </a>
+            </div>
+
+            <h2>Navigation Topics</h2>
+            <ul class="topics-list">
+                <li><a href="0Intro.html">Introduction to Cyber Security</a></li>
+                <li><a href="1Reconnaissance.html">Reconnaissance(Info gathering) Phase</a></li>
+                <li><a href="2scanning.html">Scanning Phase</a></li>
+                <li><a href="3Gaining_Access.html">Gaining Access Phase</a></li>
+                <li><a href="4Maintaining_Access.html">Maintaining Access</a></li>
+                <li><a href="5Clearing_Tracks.html">Clearing Tracks</a></li>
+                <li><a href="6Analysis_and_Reporting.html">Analysis and Reporting</a></li>
+                <li><a href="AI_tools.html">Cyber security with AI & ML</a></li>
+                <li><a href="Bug-bounty-hunting.html">Bug Bounty Hunting</a></li>
+                <li><a href="cryptography.html">Cryptography</a></li>
+                <li><a href="CTF_challenges.html">Capture The Flag(CTF) Challenges</a></li>
+                <li><a href="dfir.html">Digital Forensics & Incident Response (DFIR)</a></li>
+                <li><a href="Malware_analysis.html">Malware Analysis</a></li>
+                <li><a href="post_exploitation.html">Post Exploitation Phase</a></li>
+                <li><a href="Reverse_engineering.html">Reverse Engineering</a></li>
+            </ul>
+        </div>
+
+        <!-- Book Content Section -->
+        <div class="right-column" id="right-column">
+            <div class="page" id="book-page">
+                <div class="book-content" id="book-content">
+                    <h2>Digital Forensics and Incident Response</h2>
+
+
+
+
+                    <h1 id="digital-forensics-and-incident-responce">Digital Forensics and
+                        Incident Responce</h1>
+                    <h3>
+                        DFIR
+                    </h3>
+                    <p>It is a specialized field that investigates cyber incidents by
+                        collecting, analyzing, and preserving digital evidence to understand the
+                        nature of an attack, identify perpetrators, and prevent future
+                        incidents</p>
+                    <h3>
+                        Digital forensics
+                    </h3>
+                    <p>Is the identifying forensic artifacts or evidence  of human activity
+                        in digital devices.</p>
+                    <h3>
+                        Incident response
+                    </h3>
+                    <p>It is the process of using cyber security expertize and leveraging
+                        forensic information to identify activities of interest from security
+                        perspective.</p>
+                    <h3>
+                        Cyber crimes
+                    </h3>
+                    <p>These are crimes conducted via the internet or any computer
+                        network.</p>
+                    <hr />
+                    <h2 id="types-of-digital-forensics.">Types of digital forensics.</h2>
+                    <ul>
+                        <li>Computer forensics </li>
+                        <li>Database forensics </li>
+                        <li>Mobile device forensics</li>
+                        <li>Network forensics  </li>
+                    </ul>
+                    <h2 id="required-skills">Required Skills</h2>
+                    <h3 id="technical-skills">Technical skills </h3>
+                    <ul>
+                        <li>Programming languages</li>
+                        <li>Common operating systems</li>
+                        <li>Hardware &amp; Software proficiency</li>
+                        <li>Technical writing</li>
+                        <li>Project management</li>
+                        <li>Data analysis</li>
+                        <li>Cyber security standards </li>
+                    </ul>
+                    <h3 id="soft-skills">Soft skills </h3>
+                    <ul>
+                        <li>Analytical &amp; curious mind.</li>
+                        <li>Confidentiality </li>
+                        <li>Perseverance </li>
+                        <li>Good communication skills </li>
+                    </ul>
+                    <h2 id="applications-of-forensics">Applications of Forensics</h2>
+                    <ul>
+                        <li>Legal investigations</li>
+                        <li>Corporate security incidents</li>
+                        <li>Cybersecurity research. </li>
+                    </ul>
+                    <h2 id="laws">LAWs</h2>
+                    <ul>
+                        <li>Federal Information Security Management Act(FISM)</li>
+                        <li>Gramm-Leach Bliley Act(GLBA)</li>
+                        <li>Health Insuarance Portability &amp; Accountability Act(HIPAA)</li>
+                        <li>PCI- Data Security Standards </li>
+                    </ul>
+                    <h2 id="forensics-career">Forensics career</h2>
+                    <h3 id="law-enforcement-agencies">1. Law enforcement agencies </h3>
+                    <ul>
+                        <li>Federal bureau investigation (FBI)</li>
+                        <li>Interpol</li>
+                    </ul>
+                    <h3 id="cyber-security-firms">2. Cyber security firms</h3>
+                    <h3 id="private-firms">3. Private firms</h3>
+                    <hr />
+                    <h1 id="phases-of-forensics.">Phases of Forensics.</h1>
+                    <h3 id="nist-standard-process">NIST standard process</h3>
+                    <ol type="1">
+                        <li>Preparation </li>
+                        <li>Detection and Analysis </li>
+                        <li>Containment, Eradication, Recovery </li>
+                        <li>Post-incident Activity</li>
+                    </ol>
+                    <h3 id="sans-standard-process-picerl">SANS standard process
+                        (PICERL)</h3>
+                    <ol type="1">
+                        <li>P - Preparation </li>
+                        <li>I - Identification </li>
+                        <li>C - Containment </li>
+                        <li>E - Eradication </li>
+                        <li>R - Recovery </li>
+                        <li>L - Lessons learned</li>
+                    </ol>
+                    <h3 id="my-symplified-interpretation">My Symplified interpretation</h3>
+                    <p>​ 1. Identification(What evidence is needed)  - Understanding hacker
+                        footprints</p>
+                    <ol start="2" type="1">
+                        <li>
+                            <p>Preservation(Integrity)</p>
+                        </li>
+                        <li>
+                            <p>Analysis(Data insights)</p>
+                        </li>
+                    </ol>
+                    <ul>
+                        <li>Network traffic analysis</li>
+                        <li>Using OSINT tools for investigation</li>
+                        <li>Log monitoring for threat detection</li>
+                    </ul>
+                    <ol start="4" type="1">
+                        <li>Documentation &amp; Report</li>
+                    </ol>
+                    <ul>
+                        <li>Write down a comprehensive report on the findings.</li>
+                    </ul>
+                    <ol start="5" type="1">
+                        <li>Presentation(Deliver evidence)</li>
+                    </ol>
+                    <ul>
+                        <li>Present your documentation to the relevant authorities. </li>
+                    </ul>
+                    <p> </p>
+                    <hr />
+                    <h1 id="identification-phase">Identification Phase</h1>
+                    <ul>
+                        <li>Understanding hackers’ footprints and collecting required evidence
+                            from scene.</li>
+                    </ul>
+                    <h2 id="interview-interrogation">Interview/ interrogation </h2>
+                    <ul>
+                        <li>The ability to ask questions in a way that maximizes the amount of
+                            true information the investigator knows </li>
+                    </ul>
+                    <p>❌Most people are likely to lie ie exaggerate information.</p>
+                    <p>📌Close sources are high quality &amp; trustworthy</p>
+                    <h2 id="data-recovery">Data Recovery</h2>
+                    <p>An attempt to pull out as much information from the data as
+                        possible.</p>
+                    <ul>
+                        <li>Collect broken hard drives</li>
+                        <li>Crashed servers</li>
+                        <li>Recover deleted files</li>
+                        <li>Look into compromised devices </li>
+                    </ul>
+                    <h3 id="tools">Tools</h3>
+                    <ul>
+                        <li>Photorec</li>
+                        <li>tsk_recover</li>
+                        <li>The sleuth kit</li>
+                        <li>foremost </li>
+                        <li>Extudelete</li>
+                        <li>USBRip - history of USB events</li>
+                    </ul>
+                    <p>  ## Event reconstruction </p>
+                    <p>Traditional forensics analysis  - Fingerprints - Blood - Hair -
+                        Handwriting - Currency </p>
+                    <h3 id="tools-1">Tools</h3>
+                    <ul>
+                        <li>Velociraptor <a href="https://docs.velociraptor.com">Velociraptor
+                                Documentation</a></li>
+                    </ul>
+                    <h2 id="undercover-investigation">Undercover investigation </h2>
+                    <p>Is where a digital forensics guy pretends to be an attacker to gain
+                        community trust so as to get more first hand information.</p>
+                    <h3 id="camouflagehidebe-part-of-hackers">Camouflage/hide/be part of
+                        hackers:</h3>
+                    <ul>
+                        <li>Darkweb marketplaces</li>
+                        <li>Hacker forums</li>
+                        <li>Hackers social groups i.e Reddit, WhatsApp, facebook etc</li>
+                    </ul>
+                    <hr />
+                    <h1 id="preservation-phase.">Preservation phase.</h1>
+                    <p>This process ensures that our digital evidence is not contaminated
+                        and remains safe while analyzing.</p>
+                    <h3 id="chain-of-custody">Chain of custody </h3>
+                    <p>Any person not related to the investigations must not posses the
+                        evidence.</p>
+                    <h3 id="order-of-volatility">Order of volatility </h3>
+                    <p>Digital forensics is often volatile(will be lost forever if not
+                        captured in time) i.e RAM</p>
+                    <h3 id="timeline-creation">Timeline creation </h3>
+                    <p>A timeline of events needs to br created for efficient and accurate
+                        analysis.</p>
+                    <p>Tools  Kroll Artifact Parser &amp; Extractor(KAPE)</p>
+                    <hr />
+                    <h1 id="intelligence-gathering">Intelligence gathering </h1>
+                    <h3 id="open-source-intelligence">Open source intelligence </h3>
+                    <ul>
+                        <li>Publicly available </li>
+                        <li>Github</li>
+                        <li>Social media content </li>
+                    </ul>
+                    <h3 id="close-source-intelligence">Close source intelligence </h3>
+                    <p>This is information gained from non-public sources.</p>
+                    <p>- Past cases - Law enforcement  - Police operations  - Millitary
+                        &amp; intelligence sources  - Private organizations - Internet service
+                        providers (ISP)</p>
+                    <hr />
+                    <h1 id="disk-analysis">Disk Analysis</h1>
+                    <h3 id="tools-2">Tools</h3>
+                    <ul>
+                        <li>Autopsy - <a href="https://sleuthkit.org/autopsy/">Sleuthkit</a></li>
+                        <li>Bulk_extractor</li>
+                        <li>Fiwalk</li>
+                    </ul>
+                    <h3 id="password-cracking">Password cracking</h3>
+                    <ul>
+                        <li>This techniques will enable you to unlock compromised media. </li>
+                    </ul>
+                    <h3 id="password-cracking-tools">Password cracking Tools</h3>
+                    <ul>
+                        <li>John the ripper</li>
+                        <li>Hashcat</li>
+                        <li>Aircrack-ng </li>
+                        <li>Cain and Abel</li>
+                        <li>DVCS Ripper</li>
+                    </ul>
+                    <hr />
+                    <h1 id="memory-analysis">Memory Analysis</h1>
+                    <p>Most valuable information can be found within memory dumps(RAM image
+                        files)</p>
+                    <h3 id="memory-analysis-tools">Memory Analysis Tools</h3>
+                    <ul>
+                        <li>Volatility: <a href="https://volatilityfoundation.org">Volatility
+                                Foundation</a></li>
+                        <li>Python - imageinfo, pslist, psscan etc.</li>
+                    </ul>
+                    <h3 id="volatility-workflow">Volatility workflow</h3>
+                    <ol type="1">
+                        <li>Run strings for clues.</li>
+                        <li>Identify the image profile i.e OS type, version etc.</li>
+                        <li>Dump processes &amp; look for suspicious processes.</li>
+                        <li>Dump data related to interesting processes.</li>
+                        <li>View data in a format relating to the process i.e word: .docx,
+                            notepad: .txt etc</li>
+                    </ol>
+                    <ul>
+                        <li>
+                            <p>Profile identification </p>
+                            <pre><code>$python vol.py -f ~/images.raw imageinfo</code></pre>
+                        </li>
+                        <li>
+                            <p>Dump processes </p>
+                            <pre><code>$python vol.py -f ~/image.raw pslist --profile=Win7SP0x64 pstree</code></pre>
+                        </li>
+                        <li>
+                            <p>Process memory dump</p>
+                            <pre><code>$python vol.py -f ~/image.raw --profile=Win7SP0x64 memdump -p 2019 -D dump/</code></pre>
+                        </li>
+                    </ul>
+                    <hr />
+                    <h1 id="network-analysis">Network Analysis</h1>
+                    <h3 id="tools-3">Tools</h3>
+                    <ul>
+                        <li>Snort</li>
+                        <li>nmap</li>
+                        <li>tcpdump</li>
+                    </ul>
+                    <hr />
+                    <h1 id="documentation-and-reporting">Documentation and Reporting 
+                          </h1>
+                    <p>The report Should be:</p>
+                    <p>✅Clear</p>
+                    <p>✅ Concise </p>
+                    <p>✅ Consistent </p>
+                    <h3 id="documentation-tools">Documentation Tools</h3>
+                    <ul>
+                        <li>Word processor </li>
+                    </ul>
+                    <hr />
+                    <h1 id="useful-resources">Useful resources</h1>
+                    <h3 id="websites">Websites</h3>
+                    <p>- https://forensics.wiki/</p>
+                    <h3 id="videos-tutorials">Videos &amp; tutorials</h3>
+                    <ul>
+                        <li>13cubed youtube channel</li>
+                    </ul>
+
+
+
+
+                    <div class="book-navigation">
+                        <button class="prev-page" data-prev-page="CTF_challenges.html">
+                            <img src="assets/icons/previous_page.ico" alt="Previous" class="icon"> Previous Page
+                        </button>
+                        <button class="top-page" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                            <img src="assets/icons/back-to-top.svg" alt="Top" class="icon"> Top
+                        </button>
+                        <button class="next-page" data-next-page="Malware_analysis.html">
+                            Next Page <img src="assets/icons/nextpage.ico" alt="Next" class="icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //Hide menu on clicking outside the left-column
+        const leftColumn = document.getElementById('left-column');
+        const rightColumn = document.getElementById('right-column');
+
+        function toggleMenu() {
+            leftColumn.classList.toggle('active');
+        }
+
+        rightColumn.addEventListener('click', () => {
+            // Only hide if screen is mobile size and menu is open
+            if (window.innerWidth <= 768 && leftColumn.classList.contains('active')) {
+                leftColumn.classList.remove('active');
+            }
+        });
+    </script>
+
+    <script>
+        const bookPage = document.getElementById("book-page");
+        const bookContent = document.getElementById("book-content");
+
+        function loadPage(targetPage, direction) {
+            const flipClass = direction === 'next' ? 'flip-forward' : 'flip-backward';
+
+            bookPage.classList.add(flipClass);
+
+            setTimeout(() => {
+                fetch(targetPage)
+                    .then(response => response.text())
+                    .then(data => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(data, 'text/html');
+                        const newContent = doc.getElementById("book-content").innerHTML;
+
+                        bookContent.innerHTML = newContent;
+                        bookPage.classList.remove(flipClass);
+                    });
+            }, 600); // wait for animation
+        }
+
+        document.querySelector(".next-page").addEventListener("click", function () {
+            loadPage(this.dataset.nextPage, 'next');
+        });
+
+        document.querySelector(".prev-page").addEventListener("click", function () {
+            loadPage(this.dataset.prevPage, 'prev');
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

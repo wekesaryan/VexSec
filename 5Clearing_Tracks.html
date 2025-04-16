@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Title</title>
+    <!-- Prism CSS theme -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <!-- Prism core + language support -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <img src="assets/icons/menu.svg" alt="Menu Icon">
+        </div>
+        <!-- Topics Section -->
+        <div class="left-column" id="left-column">
+            <div class="home-button">
+                <a href="index.html" title="Go to Home">
+                    <img src="assets/icons/home.ico" alt="Home" class="home-icon">
+                </a>
+            </div>
+
+            <ul class="topics-list">
+                <li><a href="0Intro.html">Introduction to Cyber Security</a></li>
+                <li><a href="1Reconnaissance.html">Reconnaissance(Info gathering) Phase</a></li>
+                <li><a href="2scanning.html">Scanning Phase</a></li>
+                <li><a href="3Gaining_Access.html">Gaining Access Phase</a></li>
+                <li><a href="4Maintaining_Access.html">Maintaining Access</a></li>
+                <li><a href="5Clearing_Tracks.html">Clearing Tracks</a></li>
+                <li><a href="6Analysis_and_Reporting.html">Analysis and Reporting</a></li>
+                <li><a href="AI_tools.html">Cyber security with AI & ML</a></li>
+                <li><a href="Bug-bounty-hunting.html">Bug Bounty Hunting</a></li>
+                <li><a href="cryptography.html">Cryptography</a></li>
+                <li><a href="CTF_challenges.html">Capture The Flag(CTF) Challenges</a></li>
+                <li><a href="dfir.html">Digital Forensics & Incident Response (DFIR)</a></li>
+                <li><a href="Malware_analysis.html">Malware Analysis</a></li>
+                <li><a href="post_exploitation.html">Post Exploitation Phase</a></li>
+                <li><a href="Reverse_engineering.html">Reverse Engineering</a></li>
+            </ul>
+        </div>
+
+        <!-- Book Content Section -->
+        <div class="right-column" id="right-column">
+            <div class="page" id="book-page">
+                <div class="book-content" id="book-content">
+                    <h2>Clearing Tracks Phaase</h2>
+
+
+                    <p>It involves removing or deleting any evidence of the penetration test, including logs, files and
+                        other digital footprints to prevent
+                        detection by the system administrators or security team.</p>
+                    <p>🔹Do not leave any trail that can lead back to you.</p>
+                    <h3>Methods</h3>
+                    <ol type="1">
+                        <li>Clear cache, logs &amp; cookies</li>
+                        <li>Close open ports</li>
+                        <li>Dump used equipments.</li>
+                        <li>Laundering</li>
+                    </ol>
+                    <h5>Tools</h5>
+                    <p>
+                        - Shred
+                        - Auditpol</p>
+                    <h2 id="clear-logs-cache.">Clear logs &amp; Cache.</h2>
+                    <p>Common logs - Event logs - Firewall logs - Netflow logs - System
+                        logs</p>
+                    <p>  Tools
+                        - Microsoft system internals i.e SDelete, Process explorer, Autoruns
+                        - Clear logs i.e syslog - Microsoft Event viewer</p>
+                    <ul>
+                        <li>Return all modified systems back to their original state.</li>
+                        <li>Remove all Backdoors, daemons, services &amp; rootkits. - </li>
+                    </ul>
+                    <h2 id="linux.">Linux.</h2>
+                    <p>Disabling logging services like rsyslog and then deleting logs is the
+                        most effective way to cover tracks by clearing logs on a Linux
+                        system.</p>
+                    <p><span class="math inline">
+                            <div class="code-block">
+                                <pre><code class="language-bash">
+                                $cd /var/logs | ls 
+                                $ls
+                                $shred file.log
+                            </code></pre>
+                            </div>
+
+
+
+                            <p>The shred command securely overwrites files to prevent recovery, but
+                                using it on log files without first stopping the logging service is
+                                ineffective.</p>
+                            <div class="code-block">
+                                <pre><code class="language-bash">
+                        $echo $SHELL $nano ~/.bash_history or zsh_history $history -c
+                        </code></pre>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+
+                            <h2>Microsoft Windows.</h2>
+                            <blockquote>
+                                <p>clearev #clear apps, system &amp; security logs</p>
+                            </blockquote>
+                            <p>MSTSC PowerShell tool &amp; RDP &gt;mstsc /public &gt;mstsc /public
+                                /v:192.168.1.10 - Prevents credentials caching. - Disables saving of
+                                user settings.</p>
+                            <hr />
+                            <h2 id="using-rootkits.">Using Rootkits.</h2>
+                            <ul>
+                                <li>
+                                    <p>Deploying rootkits to hide the presence of malicious software or
+                                        unauthorized access.</p>
+                                </li>
+                                <li>
+                                    <p>Application Rootkits can obscure files, processes, and network
+                                        connections, making it difficult for system administrators to detect the
+                                        hacker’s activities.</p>
+                                </li>
+                            </ul>
+                            <hr />
+                            <p>Changing File Timestamps.</p>
+                            <ul>
+                                <li>Modifying the timestamps of files to make it appear as though they
+                                    were not accessed or altered.</li>
+                            </ul>
+                            <h5>Tools</h5>
+                            <p>
+                                - Metasploit framework
+                                - Touch command
+                                - timestomp
+                                - bulkFileChanger
+                                - PowerShell
+                                - Exiftool</p>
+                            <p>Can be used to change the creation, modification, and access times of
+                                files to mislead forensic investigations.</p>
+                            <hr />
+                            <p>Network Traffic Obfuscation.</p>
+                            <ul>
+                                <li>
+                                    <p>Using techniques to disguise or encrypt network traffic to
+                                        prevent detection by intrusion detection systems (IDS).</p>
+                                </li>
+                                <li>
+                                    <p>This can involve tunneling traffic through secure channels or
+                                        using VPNs to mask the source of the traffic.</p>
+                                </li>
+                            </ul>
+                            <hr />
+                            <p>Using Anonymizing Tools.</p>
+                            <ul>
+                                <li>This helps in masking the source of the attack and makes it harder
+                                    to trace back to the ethical hacker.</li>
+                            </ul>
+                            <h5>Tools</h5>
+                            <p>Tor <br> Proxy servers <br>VPNs </p>
+                            <hr />
+
+                            <h2 id="dumping-used-equipments.">Dumping used equipments.</h2>
+                            <p>Methods
+                                - Burning used hardware i.e files, computer, Pictures
+                                - Removing all confidential data
+                                - Wipe device clean i.e DBAN, KillDisk-
+                                - Disconnect all network connections.
+                                - Delete all users used
+                                - Delete all files, exe, scripts, temp files (Media sanitization)</p>
+
+                            <h5>Tools</h5>
+                            <p>Fire - Paper shredder</p>
+                            <hr />
+
+
+
+                            <p>Use the navigation buttons below to move between pages.</p>
+                            <div class="book-navigation">
+                                <button class="prev-page" data-prev-page="4Maintaining_Access.html">
+                                    <img src="assets/icons/previous_page.ico" alt="Previous" class="icon"> Previous Page
+                                </button>
+                                <button class="top-page" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                                    <img src="assets/icons/back-to-top.svg" alt="Top" class="icon"> Top
+                                </button>
+                                <button class="next-page" data-next-page="6Analysis_and_Reporting.html">
+                                    Next Page <img src="assets/icons/nextpage.ico" alt="Next" class="icon">
+                                </button>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //Hide menu on clicking outside the left-column
+        const leftColumn = document.getElementById('left-column');
+        const rightColumn = document.getElementById('right-column');
+
+        function toggleMenu() {
+            leftColumn.classList.toggle('active');
+        }
+
+        rightColumn.addEventListener('click', () => {
+            // Only hide if screen is mobile size and menu is open
+            if (window.innerWidth <= 768 && leftColumn.classList.contains('active')) {
+                leftColumn.classList.remove('active');
+            }
+        });
+    </script>
+
+    <script>
+        const bookPage = document.getElementById("book-page");
+        const bookContent = document.getElementById("book-content");
+
+        function loadPage(targetPage, direction) {
+            const flipClass = direction === 'next' ? 'flip-forward' : 'flip-backward';
+
+            bookPage.classList.add(flipClass);
+
+            setTimeout(() => {
+                fetch(targetPage)
+                    .then(response => response.text())
+                    .then(data => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(data, 'text/html');
+                        const newContent = doc.getElementById("book-content").innerHTML;
+
+                        bookContent.innerHTML = newContent;
+                        bookPage.classList.remove(flipClass);
+                    });
+            }, 600); // wait for animation
+        }
+
+        document.querySelector(".next-page").addEventListener("click", function () {
+            loadPage(this.dataset.nextPage, 'next');
+        });
+
+        document.querySelector(".prev-page").addEventListener("click", function () {
+            loadPage(this.dataset.prevPage, 'prev');
+        });
+    </script>
+
+    <script>
+        function copyCode(btn) {
+            const code = btn.parentElement.querySelector('code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                btn.innerText = "Copied!";
+                setTimeout(() => btn.innerText = "Copy", 1500);
+            });
+        }
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

