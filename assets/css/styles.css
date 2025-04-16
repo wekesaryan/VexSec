@@ -85,6 +85,15 @@ body {
   height: 40px;
 }
 
+a {
+  color: #66d9ef; /* Light blue for visibility on Tomorrow Night Blue background */
+}
+
+a:hover {
+  cursor: pointer;
+  color: #ffff00; /* Yellow on hover */
+}
+
 /****************************************
       Responsive Design 
 ********************************************/
