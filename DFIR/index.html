@@ -59,7 +59,7 @@
                     <h3>
                         Digital forensics
                     </h3>
-                    <p>Is the identifying forensic artifacts or evidence  of human activity
+                    <p>Is the identifying forensic artifacts or evidence of human activity
                         in digital devices.</p>
                     <h3>
                         Incident response
@@ -123,23 +123,22 @@
                     <h1 id="phases-of-forensics.">Phases of Forensics.</h1>
                     <h3 id="nist-standard-process">NIST standard process</h3>
                     <ol type="1">
-                        <li>Preparation </li>
-                        <li>Detection and Analysis </li>
-                        <li>Containment, Eradication, Recovery </li>
+                        <li>Preparation</li>
+                        <li>Detection and Analysis</li>
+                        <li>Containment, Eradication, Recovery</li>
                         <li>Post-incident Activity</li>
                     </ol>
-                    <h3 id="sans-standard-process-picerl">SANS standard process
-                        (PICERL)</h3>
+                    <h3>SANS standard process (PICERL)</h3>
                     <ol type="1">
-                        <li>P - Preparation </li>
-                        <li>I - Identification </li>
-                        <li>C - Containment </li>
-                        <li>E - Eradication </li>
-                        <li>R - Recovery </li>
+                        <li>P - Preparation</li>
+                        <li>I - Identification</li>
+                        <li>C - Containment</li>
+                        <li>E - Eradication</li>
+                        <li>R - Recovery</li>
                         <li>L - Lessons learned</li>
                     </ol>
                     <h3 id="my-symplified-interpretation">My Symplified interpretation</h3>
-                    <p>​ 1. Identification(What evidence is needed)  - Understanding hacker
+                    <p>​1. Identification(What evidence is needed) - Understanding hacker
                         footprints</p>
                     <ol start="2" type="1">
                         <li>
@@ -164,19 +163,19 @@
                         <li>Presentation(Deliver evidence)</li>
                     </ol>
                     <ul>
-                        <li>Present your documentation to the relevant authorities. </li>
+                        <li>Present your documentation to the relevant authorities.</li>
                     </ul>
                     <p> </p>
                     <hr />
                     <h1 id="identification-phase">Identification Phase</h1>
                     <ul>
-                        <li>Understanding hackers’ footprints and collecting required evidence
+                        <li>Understanding hackers' footprints and collecting required evidence
                             from scene.</li>
                     </ul>
-                    <h2 id="interview-interrogation">Interview/ interrogation </h2>
+                    <h2 id="interview-interrogation">Interview/ interrogation</h2>
                     <ul>
                         <li>The ability to ask questions in a way that maximizes the amount of
-                            true information the investigator knows </li>
+                            true information the investigator knows</li>
                     </ul>
                     <p>❌Most people are likely to lie ie exaggerate information.</p>
                     <p>📌Close sources are high quality &amp; trustworthy</p>
@@ -187,23 +186,23 @@
                         <li>Collect broken hard drives</li>
                         <li>Crashed servers</li>
                         <li>Recover deleted files</li>
-                        <li>Look into compromised devices </li>
+                        <li>Look into compromised devices</li>
                     </ul>
                     <h3 id="tools">Tools</h3>
                     <ul>
                         <li>Photorec</li>
                         <li>tsk_recover</li>
                         <li>The sleuth kit</li>
-                        <li>foremost </li>
+                        <li>foremost</li>
                         <li>Extudelete</li>
                         <li>USBRip - history of USB events</li>
                     </ul>
-                    <p>  ## Event reconstruction </p>
-                    <p>Traditional forensics analysis  - Fingerprints - Blood - Hair -
-                        Handwriting - Currency </p>
+                    <p>Event reconstruction</p>
+                    <p>Traditional forensics analysis - Fingerprints - Blood - Hair -
+                        Handwriting - Currency</p>
                     <h3 id="tools-1">Tools</h3>
                     <ul>
-                        <li>Velociraptor <a href="https://docs.velociraptor.com">Velociraptor
+                        <li>Velociraptor <a href="https://docs.velociraptor.com" target="_blank" rel="noopener noreferrer">Velociraptor
                                 Documentation</a></li>
                     </ul>
                     <h2 id="undercover-investigation">Undercover investigation </h2>
@@ -240,14 +239,18 @@
                     </ul>
                     <h3 id="close-source-intelligence">Close source intelligence </h3>
                     <p>This is information gained from non-public sources.</p>
-                    <p>- Past cases - Law enforcement  - Police operations  - Millitary
-                        &amp; intelligence sources  - Private organizations - Internet service
-                        providers (ISP)</p>
+                    <p> <br>Past cases 
+                        <br>Law enforcement 
+                        <br>Police operations
+                        <br>Millitary
+                        &amp; intelligence sources 
+                        <br> Private organizations 
+                        <br> Internet service providers (ISP)</p>
                     <hr />
                     <h1 id="disk-analysis">Disk Analysis</h1>
                     <h3 id="tools-2">Tools</h3>
                     <ul>
-                        <li>Autopsy - <a href="https://sleuthkit.org/autopsy/">Sleuthkit</a></li>
+                        <li>Autopsy - <a href="https://sleuthkit.org/autopsy/" target="_blank" rel="noopener noreferrer">Sleuthkit</a></li>
                         <li>Bulk_extractor</li>
                         <li>Fiwalk</li>
                     </ul>
@@ -269,7 +272,7 @@
                         files)</p>
                     <h3 id="memory-analysis-tools">Memory Analysis Tools</h3>
                     <ul>
-                        <li>Volatility: <a href="https://volatilityfoundation.org">Volatility
+                        <li>Volatility: <a href="https://volatilityfoundation.org" target="_blank" rel="noopener noreferrer">Volatility
                                 Foundation</a></li>
                         <li>Python - imageinfo, pslist, psscan etc.</li>
                     </ul>
@@ -284,11 +287,11 @@
                     </ol>
                     <ul>
                         <li>
-                            <p>Profile identification </p>
+                            <p>Profile identification</p>
                             <pre><code>$python vol.py -f ~/images.raw imageinfo</code></pre>
                         </li>
                         <li>
-                            <p>Dump processes </p>
+                            <p>Dump processes</p>
                             <pre><code>$python vol.py -f ~/image.raw pslist --profile=Win7SP0x64 pstree</code></pre>
                         </li>
                         <li>
@@ -305,20 +308,22 @@
                         <li>tcpdump</li>
                     </ul>
                     <hr />
-                    <h1 id="documentation-and-reporting">Documentation and Reporting 
-                          </h1>
+                    <h1 id="documentation-and-reporting">Documentation and Reporting</h1>
                     <p>The report Should be:</p>
                     <p>✅Clear</p>
-                    <p>✅ Concise </p>
-                    <p>✅ Consistent </p>
+                    <p>✅ Concise</p>
+                    <p>✅ Consistent</p>
                     <h3 id="documentation-tools">Documentation Tools</h3>
                     <ul>
-                        <li>Word processor </li>
+                        <li>Word processor</li>
                     </ul>
                     <hr />
-                    <h1 id="useful-resources">Useful resources</h1>
-                    <h3 id="websites">Websites</h3>
-                    <p>- https://forensics.wiki/</p>
+
+
+                    <!------------ Resources -->
+                    <h1>External Resources</h1>
+                    <h3>Websites</h3>
+                    <p><a href="https://forensics.wiki/" target="_blank" rel="noopener noreferrer"></a></p>
                     <h3 id="videos-tutorials">Videos &amp; tutorials</h3>
                     <ul>
                         <li>13cubed youtube channel</li>
