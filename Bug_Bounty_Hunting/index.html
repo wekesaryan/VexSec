@@ -28,7 +28,6 @@
                 </a>
             </div>
 
-            <h2>Skip to</h2>
             <ul class="topics-list">
                 <li><a href="../intro/">Introduction to Cyber Security</a></li>
                 <li><a href="../Reconnaissance/">Reconnaissance(Info gathering) Phase</a></li>
@@ -38,7 +37,6 @@
                 <li><a href="../Clearing_Tracks/">Clearing Tracks</a></li>
                 <li><a href="../Analysis_Reporting/">Analysis and Reporting</a></li>
                 <li><a href="../AI_Tools/">Cyber security with AI & ML</a></li>
-                <li><a href="../Bug_Bounty_Hunting/">Bug Bounty Hunting</a></li>
                 <li><a href="../Cryptography/">Cryptography</a></li>
                 <li><a href="../CTFs/">Capture The Flag(CTF) Challenges</a></li>
                 <li><a href="../DFIR/">Digital Forensics & Incident Response (DFIR)</a></li>
@@ -54,17 +52,20 @@
                 <div class="book-content" id="book-content">
                     <h2>Bug Bounty Hunting</h2>
 
-                    <p>It Is the practice of finding and reporting security vulnerabilities
+                    <p>Bug bounty hunting is the practice of finding and reporting security vulnerabilities
                         in software, websites, and applications in exchange for rewards
                         (bounties).</p>
                     <h2 id="prerequisites">Prerequisites</h2>
                     <ul>
-                        <li>Computer networking</li>
                         <li>Basic programming</li>
-                        <li>Operating systems</li>
-                        <li>Ethical hacking</li>
+                        <li>Computer networking</li>
+                        <li>Computational Basics</li>
+                        <li>Cloud computing knowledge </li>
+                        <li>Infrastructure exploitation skills</li>
+                        <li>Operating systems: Linux</li>
+                        <li>Web Technologies</li>
                     </ul>
-                    <h2 id="platformsforums.">Platforms/Forums.</h2>
+                    <h2 id="platformsforums.">Bug Bounty Platforms/Forums.</h2>
                     <p>These are platforms where you can report bugs.</p>
 
                     <h3> 1. Open for signup </h3>
@@ -111,6 +112,24 @@
                         </li>
                     </ul>
                     <hr />
+
+
+                    <h3>Vulnerability Disclosure Programs(VDP)</h3>
+                    <p>A VDP is a structured framework that allows organizations to receive, manage, and address
+                        security vulnerabilities
+                        reported by external parties, including security researchers and ethical hackers</p>
+                    <p>In simple terms: These are platforms where you can report bugs for free without being paid</p>
+                    <ul>
+                        <li><a href="https://www.bugcrowd.com/glossary/vulnerability-disclosure-program-vdp/"
+                                target="_blank" rel="noopener noreferrer">Bug Crowd VDP</a></li>
+                        <li><a href="https://www.hackerone.com/product/response-vulnerability-disclosure-program"
+                                target="_blank" rel="noopener noreferrer">Hackerone VDP</a></li>
+                        <li><a href="https://qwilr.com/vulnerability-disclosure/" target="_blank"
+                                rel="noopener noreferrer">Qwilr VDP</a></li>
+                        <li><a href="https://www.dsci.in/content/vulnerability-disclosure-program" target="_blank"
+                                rel="noopener noreferrer">DSCI VDP</a></li>
+                    </ul>
+
 
                     <!-------------Phases of Bug Bounty Hunting ------------->
                     <h1>Phases of Bug Bounty Hunting.</h1>
@@ -168,11 +187,11 @@
 
                     <!------------Penetration Testing Lab Set-up ---------------->
                     <h2>Penetration testing lab set-up.</h2>
-                    <p>📌Tools are invented &amp; deprecated, master the methodology not the tool.</p>
-                    <h3>Tools.</h3>
+                    <p>📌Master the methodology not the tool, Tools are invented &amp; overtime they get deprecated,</p>
+                    <h3>Essential Tools.</h3>
                     <ul>
                         <li>Virtual Machine</li>
-                        <li>Ubuntu box</li>
+                        <li>Ubuntu OS</li>
                         <li>Web server</li>
                         <li>VPS provider</li>
                         <li>Docker</li>
@@ -189,15 +208,14 @@
                         <li>changeme Default credential scanner</li>
                         <li>PHPGGC PHP gadget chain exploitation</li>
                     </ul>
-                    <h3 id="ssrf-lfi-xxe-jwt-attacks">SSRF, LFI, XXE &amp; JWT Attacks</h3>
+                    <h3>SSRF, LFI, XXE &amp; JWT Attacks</h3>
                     <ul>
                         <li>LFISuit LFI (Local File Inclusion) scanner</li>
                         <li>ssrfDetector Detects SSRF vulnerabilities</li>
                         <li>XXE Injector XXE (XML External Entity) attack tool</li>
                         <li>oxml_xxe Detects XXE vulnerabilities in XML files</li>
                     </ul>
-                    <h3 id="automated-pentesting-frameworks">Automated Pentesting
-                        Frameworks</h3>
+                    <h3>Automated Pentesting Frameworks</h3>
                     <ul>
                         <li>Sn1per</li>
                         <li>Sandcastle</li>
@@ -240,7 +258,7 @@
                         <li>API</li>
                         <li>Authentication errors</li>
                         <li>Handler errors</li>
-                        <li>Permission issues  </li>
+                        <li>Permission issues </li>
                     </ul>
                     <ol start="2" type="1">
                         <li>Hardware design</li>
@@ -277,7 +295,7 @@
 
 
                     <!------------------Useful Resources ---------------------->
-                    <h1>References and Resources</h1>
+                    <h1>External Resources</h1>
                     <h3>Books &amp; Journals</h3>
                     <ul>
                         <li>Bug bounty bootcamp by Vicki Li</li>
@@ -285,20 +303,44 @@
                         <li>Real world Bug bounty by Peter Yaworski</li>
                         <li>Web hacking 101 by Peter Yaworski</li>
                     </ul>
-                    <h3>Videos &amp; Tutorials</h3>
+
+                    <h3>Bug Bounty Writeups</h3>
+                    <ul>
+                        <li><a href="https://pentester.land/writeups" target="_blank"
+                                rel="noopener noreferrer">Pentester</a></li>
+                        <li><a href="https://infosecwriteups.com/" target="_blank"
+                                rel="noopener noreferrer">Infosec Writeups</a></li>
+                    </ul>
+
+                    <h3>Github Repositories</h3>
+                    <ul>
+                        <li><a href="https://github.com/Muhammd/awesome-bug-bounty" target="_blank" rel="noopener noreferrer">Awesome Bug Bounty by Muhammd</a></li>
+                        <li><a href="https://github.com/djadmin/awesome-bug-bounty" target="_blank" rel="noopener noreferrer">Awesome Bug Bounty by Djadmin</a></li>
+                    </ul>
+
+
+                    <h3>Videos</h3>
                     <ul>
                         <li><a href="https://www.youtube.com/@NahamSec" target="_blank"
-                                rel="noopener noreferrer">Nahamsec</a></li>
+                                rel="noopener noreferrer">Nahamsec Youtube</a></li>
                         <li><a href="https://www.youtube.com/@bughunterlabs" target="_blank"
                                 rel="noopener noreferrer">Bug hunter
-                                labs</a></li>
+                                labs Youtube</a></li>
                         <li><a href="https://www.youtube.com/@ryan_phdsec" target="_blank"
-                                rel="noopener noreferrer">Ryan John</a></li>
+                                rel="noopener noreferrer">Ryan John Youtube</a></li>
+                                <li><a href="https://www.youtube.com/@_JohnHammond" target="_blank" rel="noopener noreferrer">John Hammond</a></li>
                     </ul>
+
+                    <h3>Websites</h3>
+                    <ul>
+                        <li><a href="https://lostsec.xyz/" target="_blank" rel="noopener noreferrer">Lotsec</a></li>
+                    </ul>
+
+
 
                     <!---------------Bottom Navigation --------------->
 
-                    <p>Use the navigation buttons below to move between pages.</p>
+
                     <div class="book-navigation">
                         <button class="prev-page" data-prev-page="../AI_Tools/">
                             <img src="../assets/icons/previous_page.ico" alt="Previous" class="icon"> Previous Page

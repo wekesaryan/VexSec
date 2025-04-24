@@ -22,7 +22,6 @@
                 </a>
             </div>
 
-            <h2>Navigation Topics</h2>
             <ul class="topics-list">
                 <li><a href="../intro/">Introduction to Cyber Security</a></li>
                 <li><a href="../Reconnaissance/">Reconnaissance(Info gathering) Phase</a></li>
@@ -33,7 +32,6 @@
                 <li><a href="../Analysis_Reporting/">Analysis and Reporting</a></li>
                 <li><a href="../AI_Tools/">Cyber security with AI & ML</a></li>
                 <li><a href="../Bug_Bounty_Hunting/">Bug Bounty Hunting</a></li>
-                <li><a href="../Cryptography/">Cryptography</a></li>
                 <li><a href="../CTFs/">Capture The Flag(CTF) Challenges</a></li>
                 <li><a href="../DFIR/">Digital Forensics & Incident Response (DFIR)</a></li>
                 <li><a href="../Malware/">Malware Analysis</a></li>
@@ -46,26 +44,135 @@
         <div class="right-column" id="right-column">
             <div class="page" id="book-page">
                 <div class="book-content" id="book-content">
-                    <h2>Cryptography</h2>
+                    <h1>Cryptography</h1>
+                    <p>Cryptography is the art of writing code to secure information by use of mathematical algorithms.
+                    </p>
 
+
+                    <h2>Data transformation protection.</h2>
+                    <p>Data transformation is changing the form/structure of data to protect it from unauthorized access
+                        or misuse.</p>
+
+                    <p>Methods of Data Transformation and Protection</p>
+                    <h3>1. Encoding</h3>
+                    <p>Transforms data into another format using a scheme that is publicly available so that it can
+                        easily be reversed.</p>
+
+                    <h3>2. Encryption.</h3>
+                    <h3>3. Hashing.</h3>
+                    <h3>4. Obfuscation</h3>
+
+
+                    <!-------  Ancient Cryptography -------------------->
                     <h2>Ancient Cryptography</h2>
+                    <p>Ancient cryptography refers to the early methods of securing information, often using simple
+                        techniques like substitution and transposition ciphers.</p>
+                    <p>These methods were used in ancient civilizations to protect sensitive information from enemies
+                        and
+                        unauthorized access.</p>
+
+
+                    <p>Cipher Families</p>
+
+                    <h3>Substitutional ciphers</h3>
+                    <h3>Transpotion ciphers</h3>
+                    <h3>Stream ciphers</h3>
+                    <h3>Block ciphers</h3>
+                    <h3>Hill cipher</h3>
+                    <h3>Rail Fence ciphers</h3>
+
+
+                    <!------------------Modern Cryptography -------------->
+
                     <h2>Modern Cryptography</h2>
+
+
+
+                    <p>Modern cryptography is based on mathematical algorithms and computational complexity. It uses
+                        advanced techniques to secure data and communications.</p>
+                    <p>Modern cryptography is used in various applications, including secure communication, digital
+                        signatures, authentication, and data integrity.</p>
+
+                    <h3>Symetrical ciphers</h3>
+
+                    <p></p>
+                    <p>Advanced Encryption Standard(AES)</p>
+
+
+                    <h3>Assymetrical ciphers</h3>
+
+                    <p>RSA (Rivest-Shamir-Adleman)</p>
+                    <p>DSA (Digital Signature Algorithm)</p>
+                    <p>Elliptic Curve Cryptography (ECC)</p>
+
+                    <!---------Cryptanalysis ------------------>
+
                     <h2>Cryptanalysis</h2>
+
+                    <p>Cryptanalysis are techniques for defeating cryptographic systems and gaining access to the
+                        information they protect.</p>
+
+
+                    <h3>Types of Cryptanalysis</h3>
+                    <p>There are various methods of cryptanalysis, including:</p>
+                    <ul>
+                        <li>Brute Force Attack</li>
+                        <li>Frequency Analysis</li>
+                        <li>Chosen Plaintext Attack</li>
+                        <li>Known Plaintext Attack</li>
+                    </ul>
+
+
+                    <!-----------Steganography------->
                     <h2>Steganoghaphy</h2>
+                    <p>Hieroglyph - use of pictures instead if words.
+                        Steganography - embed text inside other files i.e images, document</p>
+                    <p>Steganalysis - detect the presence of hidden information.</p>
+                    <p>Steganography is the practice of hiding information within other non-secret data, such as images
+                        or audio files. It aims to conceal the existence of the message itself.</p>
+
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Steghide</li>
+                        <li>Deep sound</li>
+                        <li>Openstego</li>
+                        <li>Mp3Stego</li>
+                    </ul>
+
+                    <!-------------External Resources ------------->
+
+                    <h2>External Resources</h2>
+                    <h3>Books</h3>
+                    <ul>
+                        <li><a href="https://www.amazon.com/Cryptography-Computer-Security-Principles-Practice/dp/0134444280"
+                                target="_blank">Cryptography and Network Security: Principles and Practice</a></li>
+                        <li><a href="https://www.amazon.com/Cryptography-Engineering-Principles-Practice-Second/dp/111947168X"
+                                target="_blank">Cryptography Engineering: Design Principles and Practical
+                                Applications</a>
+                        </li>
+                        <li><a href="https://www.amazon.com/Cryptography-Computer-Security-Principles-Practice/dp/0134444280"
+                                target="_blank">Applied Cryptography: Protocols, Algorithms, and Source Code in C</a>
+                        </li>
+
+                        <h3>Videos</h3>
+
+                        <h3>Websites</h3>
 
 
-                    <p>Use the navigation buttons below to move between pages.</p>
-                    <div class="book-navigation">
-                        <button class="prev-page" data-prev-page="../Cryptography/">
-                            <img src="../assets/icons/previous_page.ico" alt="Previous" class="icon"> Previous Page
-                        </button>
-                        <button class="top-page" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-                            <img src="../assets/icons/back-to-top.svg" alt="Top" class="icon"> Top
-                        </button>
-                        <button class="next-page" data-next-page="../CTFs/">
-                            Next Page <img src="../assets/icons/nextpage.ico" alt="Next" class="icon">
-                        </button>
-                    </div>
+
+
+                        <!-------------Bottom Navigation ----------------->
+                        <div class="book-navigation">
+                            <button class="prev-page" data-prev-page="../Cryptography/">
+                                <img src="../assets/icons/previous_page.ico" alt="Previous" class="icon"> Previous Page
+                            </button>
+                            <button class="top-page" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                                <img src="../assets/icons/back-to-top.svg" alt="Top" class="icon"> Top
+                            </button>
+                            <button class="next-page" data-next-page="../CTFs/">
+                                Next Page <img src="../assets/icons/nextpage.ico" alt="Next" class="icon">
+                            </button>
+                        </div>
                 </div>
             </div>
         </div>
