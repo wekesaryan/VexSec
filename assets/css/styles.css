@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
+/*****************************************
+       Global Styles
+******************************************/
+
 * {
   margin: 0;
   padding: 0;
@@ -19,71 +23,6 @@ body {
   margin: 0;
   font-family: "Poppins", Arial, sans-serif;
   transition: background 0.3s, color 0.3s;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-/*****************************************
-       Global Styles
-******************************************/
-
-/* Tomorrow Night Blue (default theme) */
-.theme-switcher {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 1005;
-}
-
-#theme-icon {
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-}
-
-#theme-selector {
-  display: none;
-  position: absolute;
-  top: 40px;
-  right: 0;
-  background: #fff;
-  color: #000;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-  padding: 5px;
-  z-index: 1006;
-}
-
-.theme-tomorrow {
-  --bg-color: #002451;
-  --text-color: #c5c8c6;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-.theme-light {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-.theme-dark {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-.theme-dark #theme-icon,
-.theme-slate #theme-icon {
-  filter: invert(1);
-}
-
-.theme-slate {
-  --bg-color: #2e3b4e;
-  --text-color: #d1dbe8;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -132,13 +71,110 @@ body {
   height: 40px;
 }
 
-a {
-  color: #66d9ef;
+/****************************************
+Theme Variables
+*************************************/
+
+.theme-switcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1005;
 }
 
-a:hover {
+#theme-icon {
+  width: 32px;
+  height: 32px;
   cursor: pointer;
-  color: #ffff00; /* Yellow on hover */
+}
+
+#theme-selector {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 5px;
+  z-index: 1006;
+}
+
+/* Tomorrow Night Blue Theme */
+.theme-tomorrow {
+  --bg-color: #002451;
+  --text-color: #c5c8c6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.theme-tomorrow .topics-list li a:hover {
+  cursor: pointer;
+  color: #3498db; /* Blue on hover */
+}
+
+.theme-tomorrow .topics-list li {
+  list-style-type: none; /* Remove default list styling */
+}
+
+/* Light theme */
+.theme-light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.theme-light .topics-list li a {
+  color: #000000;
+}
+.theme-light .topics-list li a:hover {
+  cursor: pointer;
+  color: #3498db; /* Blue on hover */
+}
+
+.theme-light .topics-list li {
+  list-style-type: none; /* Remove default list styling */
+}
+
+/* Dark theme */
+.theme-dark {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.theme-dark #theme-icon,
+.theme-slate #theme-icon {
+  filter: invert(1);
+}
+
+.theme-dark .topics-list li a:hover {
+  cursor: pointer;
+  color: #3498db; /* Blue on hover */
+}
+
+.theme-dark .topics-list li {
+  list-style-type: none; /* Remove default list styling */
+}
+
+/* Slate theme */
+.theme-slate {
+  --bg-color: #2e3b4e;
+  --text-color: #d1dbe8;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.theme-slate .topics-list li a:hover {
+  cursor: pointer;
+  color: #3498db; /* Blue on hover */
+}
+
+.theme-slate .topics-list li {
+  list-style-type: none; /* Remove default list styling */
 }
 
 /****************************************
