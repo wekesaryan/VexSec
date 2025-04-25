@@ -42,18 +42,18 @@
             </div>
 
             <ul class="topics-list">
-                <li><a href="../intro/">Introduction to Cyber Security</a></li>
-                <li><a href="../Reconnaissance/">Reconnaissance(Info gathering) Phase</a></li>
+                <li><a href="../intro/">Introduction </a></li>
+                <li><a href="../Reconnaissance/">Reconnaissance Phase</a></li>
                 <li><a href="../Scanning/">Scanning Phase</a></li>
                 <li><a href="../Gaining_Access/">Gaining Access Phase</a></li>
                 <li><a href="../Maintaining_Access/">Maintaining Access</a></li>
                 <li><a href="../Clearing_Tracks/">Clearing Tracks</a></li>
                 <li><a href="../Analysis_Reporting/">Analysis and Reporting</a></li>
-                <li><a href="../AI_Tools/">Cyber security with AI & ML</a></li>
+                <li><a href="../AI_Tools/">AI in Cyber Securiy</a></li>
                 <li><a href="../Bug_Bounty_Hunting/">Bug Bounty Hunting</a></li>
                 <li><a href="../Cryptography/">Cryptography</a></li>
                 <li><a href="../CTFs/">Capture The Flag(CTF) Challenges</a></li>
-                <li><a href="../DFIR/">Digital Forensics & Incident Response (DFIR)</a></li>
+                <li><a href="../DFIR/">Digital Forensics &amp; Incident Response</a></li>
                 <li><a href="../Malware/">Malware Analysis</a></li>
                 <li><a href="../Post_Exploitation/">Post Exploitation Phase</a></li>
                 <li><a href="../Reverse_Engineering/">Reverse Engineering</a></li>
@@ -80,20 +80,23 @@
                     </ol>
                     <h5>Tools</h5>
                     <p>
-                        - Shred
-                        - Auditpol</p>
+                        Shred
+                        <br> Auditpol
+                    </p>
+
                     <h2 id="clear-logs-cache.">Clear logs &amp; Cache.</h2>
                     <p>Common logs - Event logs - Firewall logs - Netflow logs - System
                         logs</p>
-                    <p>  Tools
-                        - Microsoft system internals i.e SDelete, Process explorer, Autoruns
-                        - Clear logs i.e syslog - Microsoft Event viewer</p>
+                    <p>Tools
+                        <br> Microsoft system internals i.e SDelete, Process explorer, Autoruns
+                        <br>Clear logs i.e syslog - Microsoft Event viewer
+                    </p>
                     <ul>
                         <li>Return all modified systems back to their original state.</li>
-                        <li>Remove all Backdoors, daemons, services &amp; rootkits. - </li>
+                        <li>Remove all Backdoors, daemons, services &amp; rootkits.</li>
                     </ul>
                     <h2 id="linux.">Linux.</h2>
-                    <p>Disabling logging services like rsyslog and then deleting logs is the
+                    <p>Disabling logging services like rsyslog and then deleting logs is the
                         most effective way to cover tracks by clearing logs on a Linux
                         system.</p>
                     <p><span class="math inline">
@@ -103,6 +106,7 @@
                                 $ls
                                 $shred file.log
                             </code></pre>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                             </div>
 
 
@@ -145,12 +149,12 @@
                             </ul>
                             <h5>Tools</h5>
                             <p>
-                                <li>Metasploit framework</li>
-                                <li>Touch command</li>
-                                <li>timestamp</li>
-                                <li>bulkFileChanger</li>
-                                <li>PowerShell</li>
-                                <li>Exiftool</li>
+                                <br>Metasploit framework
+                                <br>Touch command
+                                <br>timestamp
+                                <br>bulkFileChanger
+                                <br>PowerShell
+                                <br>Exiftool
                             </p>
                             <p>Can be used to change the creation, modification, and access times of
                                 files to mislead forensic investigations.</p>
@@ -206,7 +210,8 @@
                             <img src="../assets/icons/previous_page.svg" alt="Previous" class="icon"> Previous
                             Page
                         </button>
-                        <button class="top-page" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                        <button class="top-page"
+                            onclick="document.getElementById('right-column').scrollTo({ top: 0, behavior: 'smooth' });">
                             <img src="../assets/icons/back-to-top.svg" alt="Top" class="icon"> Top
                         </button>
                         <button class="next-page" data-next-page="../Analysis_Reporting/">
@@ -277,41 +282,7 @@
         }
     </script>
 
-    <script>
-        const selector = document.getElementById('theme-selector');
-        const root = document.body;
-
-        const themes = {
-            tomorrow: 'theme-tomorrow',
-            light: 'theme-light',
-            dark: 'theme-dark',
-            slate: 'theme-slate'
-        };
-
-        function applyTheme(themeKey) {
-            const className = themes[themeKey];
-            if (className) {
-                root.className = className;
-                selector.value = themeKey;
-                localStorage.setItem('theme', themeKey);
-            }
-        }
-
-        // Apply saved theme or default
-        window.addEventListener('DOMContentLoaded', () => {
-            const saved = localStorage.getItem('theme') || 'tomorrow';
-            applyTheme(saved);
-        });
-
-        selector.addEventListener('change', e => {
-            applyTheme(e.target.value);
-        });
-
-        // Toggle dropdown on icon click
-        document.getElementById('theme-icon').addEventListener('click', () => {
-            selector.style.display = selector.style.display === 'block' ? 'none' : 'block';
-        });
-    </script>
+    <script src="../assets/js/themes.js"></script>
 
 
     <script src="../assets/js/main.js"></script>

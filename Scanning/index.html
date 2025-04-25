@@ -16,16 +16,16 @@
 
 <body>
 
-        <!-- Theme Selector -->
-        <div class="theme-switcher">
-            <img src="../assets/icons/palette.svg" alt="Theme Switcher" id="theme-icon">
-            <select id="theme-selector">
-                <option value="tomorrow" selected>Tomorrow Night Blue</option>
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-                <option value="slate">Slate</option>
-            </select>
-        </div>
+    <!-- Theme Selector -->
+    <div class="theme-switcher">
+        <img src="../assets/icons/palette.svg" alt="Theme Switcher" id="theme-icon">
+        <select id="theme-selector">
+            <option value="tomorrow" selected>Tomorrow Night Blue</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="slate">Slate</option>
+        </select>
+    </div>
     <div class="container">
         <!--Menu Icon -->
         <div class="menu-icon" onclick="toggleMenu()">
@@ -41,20 +41,20 @@
             </div>
 
             <ul class="topics-list">
-                <li><a href="../intro/">Introduction to Cyber Security</a></li>
-                <li><a href="../Reconnaissance/">Reconnaissance(Info gathering) Phase</a></li>
-                <li><a href="../Gaining_Access/">Gaining Access Phase</a></li>
-                <li><a href="../Maintaining_Access/">Maintaining Access</a></li>
-                <li><a href="../Clearing_Tracks/">Clearing Tracks</a></li>
-                <li><a href="../Analysis_Reporting/">Analysis and Reporting</a></li>
-                <li><a href="../AI_Tools/">Cyber security with AI & ML</a></li>
-                <li><a href="../Bug_Bounty_Hunting/">Bug Bounty Hunting</a></li>
-                <li><a href="../Cryptography/">Cryptography</a></li>
-                <li><a href="../CTFs/">Capture The Flag(CTF) Challenges</a></li>
-                <li><a href="../DFIR/">Digital Forensics & Incident Response (DFIR)</a></li>
-                <li><a href="../Malware/">Malware Analysis</a></li>
-                <li><a href="../Post_Exploitation/">Post Exploitation Phase</a></li>
-                <li><a href="../Reverse_Engineering/">Reverse Engineering</a></li>
+                <li><a href="../intro/">1. Introduction</a></li>
+                <li><a href="../Reconnaissance/">2. Reconnaissance Phase</a></li>
+                <li><a href="../Gaining_Access/">3. Gaining Access Phase</a></li>
+                <li><a href="../Maintaining_Access/">4. Maintaining Access</a></li>
+                <li><a href="../Clearing_Tracks/">5. Clearing Tracks</a></li>
+                <li><a href="../Analysis_Reporting/">6. Analysis and Reporting</a></li>
+                <li><a href="../AI_Tools/">7. Cyber security with</a></li>
+                <li><a href="../Bug_Bounty_Hunting/">8. Bug Bounty Hunting</a></li>
+                <li><a href="../Cryptography/">9. Cryptography</a></li>
+                <li><a href="../CTFs/">10. Capture The Flag(CTF)</a></li>
+                <li><a href="../DFIR/">11. Digital Forensics & Incident Response</a></li>
+                <li><a href="../Malware/">12. Malware Analysis</a></li>
+                <li><a href="../Post_Exploitation/">13. Post Exploitation Phase</a></li>
+                <li><a href="../Reverse_Engineering/">14. Reverse Engineering</a></li>
             </ul>
         </div>
 
@@ -62,6 +62,7 @@
         <div class="right-column" id="right-column">
             <div class="page" id="book-page">
                 <div class="book-content" id="book-content">
+                    <h1>Scanning Phase</h1>
 
                     <p>The scanning phase is a crucial step in the ethical hacking process, which involves identifying
                         potential vulnerabilities in a target system or network.</p>
@@ -140,10 +141,11 @@
 
                             <div class="code-block">
                                 <pre><code class="language-bash">  
-                                p =&gt; port
- sV =&gt; service versions
- A =&gt; OS type, version, script scan
- O =&gt; remote OS detection </code></pre>
+p =&gt; port
+sV =&gt; service versions
+A =&gt; OS type, version, script scan
+O =&gt; remote OS detection</code></pre>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                             </div>
 
                         </li>
@@ -157,7 +159,7 @@
                     </ol>
 
                     <hr />
-                    <p># Vulnerability scanning.</p>
+                    <p>Vulnerability scanning.</p>
                     <ul>
                         <li>
                             <p>Acunetix</p>
@@ -192,14 +194,18 @@
                         </li>
                         <li>
                             <p><a href="https://virustotal.com" target="_blank" rel="noopener noreferrer">Virus
-                                    total</a>  </p>
-                            <pre><code>$nc 192.168.1.203 80</code></pre>
+                                    total</a></p>
+                            <div class="code-block">
+                                <pre><code class="language-bash">
+$nc 192.168.1.203 80</code></pre>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+
                         </li>
                     </ul>
                     <hr />
-                    <h1 id="port-scanningports-services.">Port scanning(ports,
-                        services).</h1>
-                    <p>  ### Port scanning Tools</p>
+                    <h1 id="port-scanningports-services.">Port scanning(ports,services).</h1>
+                    <p>Port scanning Tools</p>
                     <ul>
                         <li>
                             <p>Angry IP scanner</p>
@@ -212,7 +218,12 @@
                         </li>
                         <li>
                             <p>Wireshark</p>
-                            <pre><code>$nmap -sT -p 1-1024 &lt;target_ip&gt;</code></pre>
+                            <div class="code-block">
+                                <pre><code class="language-bash">
+    $nmap -sT -p 1-1024 &lt;target_ip&gt;
+                        </code></pre>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
                         </li>
                     </ul>
                     <p>📌 If the target has no vulnerabilities, create the
@@ -221,6 +232,7 @@
                     <h1 id="sniffinganalyze-captured-traffic.">Sniffing(Analyze captured
                         traffic).</h1>
                     <p>Is the process of capturing and analyzing network traffic.</p>
+
                     <h3 id="sniffing-tools">Sniffing Tools</h3>
                     <ol type="1">
                         <li>Steel central packet analyzer</li>
@@ -251,14 +263,18 @@
                                 documentaion</a></li>
                     </ul>
 
+
+
+
                     <!----------------Bottom Navigation Page ------------------->
 
-                    <p>Use the navigation buttons below to move between pages.</p>
+
                     <div class="book-navigation">
                         <button class="prev-page" data-prev-page="../Reconnaissance/">
                             <img src="../assets/icons/previous_page.svg" alt="Previous" class="icon"> previous
                         </button>
-                        <button class="top-page" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                        <button class="top-page"
+                            onclick="document.getElementById('right-column').scrollTo({ top: 0, behavior: 'smooth' });">
                             <img src="../assets/icons/back-to-top.svg" alt="Top" class="icon"> Top
                         </button>
                         <button class="next-page" data-next-page="../Gaining_Access/">
@@ -329,41 +345,7 @@
         }
     </script>
 
-    <script>
-        const selector = document.getElementById('theme-selector');
-        const root = document.body;
-
-        const themes = {
-            tomorrow: 'theme-tomorrow',
-            light: 'theme-light',
-            dark: 'theme-dark',
-            slate: 'theme-slate'
-        };
-
-        function applyTheme(themeKey) {
-            const className = themes[themeKey];
-            if (className) {
-                root.className = className;
-                selector.value = themeKey;
-                localStorage.setItem('theme', themeKey);
-            }
-        }
-
-        // Apply saved theme or default
-        window.addEventListener('DOMContentLoaded', () => {
-            const saved = localStorage.getItem('theme') || 'tomorrow';
-            applyTheme(saved);
-        });
-
-        selector.addEventListener('change', e => {
-            applyTheme(e.target.value);
-        });
-
-        // Toggle dropdown on icon click
-        document.getElementById('theme-icon').addEventListener('click', () => {
-            selector.style.display = selector.style.display === 'block' ? 'none' : 'block';
-        });
-    </script>
+    <script src="../assets/js/themes.js"></script>
 
     <script src="../assets/js/main.js"></script>
 </body>

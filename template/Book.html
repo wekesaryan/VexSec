@@ -45,15 +45,14 @@
                 </a>
             </div>
 
-            <h2>Navigation Topics</h2>
             <ul class="topics-list">
                 <li>Topic 1</li>
                 <li>Topic 2</li>
                 <li>Topic 3</li>
                 <li>Topic 4</li>
-                <li>Topic 4</li>
                 <li>Topic 5</li>
                 <li>Topic 6</li>
+                <li>Topic 7</li>
             </ul>
         </div>
 
@@ -72,7 +71,8 @@
                         <button class="prev-page" data-prev-page="404.html">
                             <img src="../assets/icons/previous_page.svg" alt="Previous" class="icon"> Previous
                         </button>
-                        <button class="top-page" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                        <button class="top-page"
+                            onclick="document.getElementById('right-column').scrollTo({ top: 0, behavior: 'smooth' });">
                             <img src="../assets/icons/back-to-top.svg" alt="Top" class="icon"> Top
                         </button>
                         <button class="next-page" data-next-page="404.html">
@@ -146,46 +146,7 @@
 
 
 
-    <script>
-        const selector = document.getElementById('theme-selector');
-        const root = document.body;
-
-        const themes = {
-            tomorrow: 'theme-tomorrow',
-            light: 'theme-light',
-            dark: 'theme-dark',
-            slate: 'theme-slate'
-        };
-
-        function applyTheme(themeKey) {
-            const className = themes[themeKey];
-            if (className) {
-                root.className = className;
-                selector.value = themeKey;
-                localStorage.setItem('theme', themeKey);
-            }
-        }
-
-        // Apply saved theme or default
-        window.addEventListener('DOMContentLoaded', () => {
-            const saved = localStorage.getItem('theme') || 'tomorrow';
-            applyTheme(saved);
-        });
-
-        selector.addEventListener('change', e => {
-            applyTheme(e.target.value);
-        });
-
-        // Toggle dropdown on icon click
-        document.getElementById('theme-icon').addEventListener('click', () => {
-            selector.style.display = selector.style.display === 'block' ? 'none' : 'block';
-        });
-    </script>
-
-
-
-
-
+    <script src="../assets/js/themes.js"></script>
 
     <script src="../assets/js/main.js"></script>
 </body>
