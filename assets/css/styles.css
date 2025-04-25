@@ -9,35 +9,83 @@
   outline: none;
   font-family: "Poppins", sans-serif;
 }
-:root {
-  --bg-color: #081b29;
-  --main-color: #00abf0;
-  --text-color: #333;
-  --second-text-color: #555;
-  --white-color: #fff;
-  --cover-color: linear-gradient(45deg, #00abf0, #006e9a);
-  --pages-color: linear-gradient(90deg, #fff, #ddd);
-  --border: 0.125rem solid #00abf0;
-  --box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
-}
 
 html {
   scroll-behavior: smooth;
 }
 
+/* Base Reset */
 body {
   margin: 0;
   font-family: "Poppins", Arial, sans-serif;
-  background-color: #f4f4f4;
+  transition: background 0.3s, color 0.3s;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 /*****************************************
        Global Styles
 ******************************************/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+/* Tomorrow Night Blue (default theme) */
+.theme-switcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1005;
+}
+
+#theme-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+#theme-selector {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 5px;
+  z-index: 1006;
+}
+
+.theme-tomorrow {
+  --bg-color: #002451;
+  --text-color: #c5c8c6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.theme-light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.theme-dark {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.theme-dark #theme-icon,
+.theme-slate #theme-icon {
+  filter: invert(1);
+}
+
+.theme-slate {
+  --bg-color: #2e3b4e;
+  --text-color: #d1dbe8;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .container {
@@ -59,8 +107,6 @@ body {
 .right-column {
   margin-left: 25%;
   width: 75%;
-  background-color: #0f3375;
-  color: white;
   padding: 20px;
   height: 100vh;
   overflow-y: auto;
@@ -86,7 +132,7 @@ body {
 }
 
 a {
-  color: #66d9ef; /* Light blue for visibility on Tomorrow Night Blue background */
+  color: #66d9ef;
 }
 
 a:hover {
@@ -100,6 +146,10 @@ a:hover {
 
 /* Mobile View */
 @media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
   .left-column {
     position: fixed;
     top: 0;
@@ -122,6 +172,43 @@ a:hover {
 
   .menu-icon {
     display: block;
+  }
+
+  .book-navigation button {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    margin: 6px;
+  }
+
+  .book-navigation .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .copy-btn {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  .book-navigation button {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    margin: 6px;
+  }
+
+  .book-navigation .icon {
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -147,11 +234,16 @@ a:hover {
   margin-bottom: 15px; /* Add spacing below the profile picture */
 }
 
+h1,
+h2,
+h3 {
+  color: #db1e5d;
+}
+
 .portfolio h1 {
   font-size: 1.5rem;
   margin: 10px 0;
   text-align: center; /* Center-align text */
-  color: #db1e5d;
 }
 
 .portfolio p {
@@ -159,16 +251,11 @@ a:hover {
   text-align: center;
   color: #ffffff;
 }
+
 .portfolio img {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
-}
-
-h1,
-h2,
-h3 {
-  color: #db1e5d;
 }
 
 .skills {
@@ -225,7 +312,6 @@ h3 {
   padding: 10px;
   margin: 5px 0;
   list-style: none;
-  color: #ffffa5;
   font-size: large;
 }
 
@@ -252,17 +338,31 @@ h3 {
   position: relative;
   background-color: #1e1e1e;
   color: #dcdcdc;
-  padding: 15px;
+  padding: 1rem;
   border-radius: 10px;
   font-family: "Fira Code", monospace;
-  margin: 20px 0;
+  margin: 1.5rem 0;
   overflow-x: auto;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .code-block pre {
-  margin: 0;
+  margin: 0 !important;
+  text-align: left !important;
+  padding: 0 !important;
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  font-family: "Fira Code", monospace;
 }
 
+.code-block {
+  text-align: left !important;
+  overflow-y: auto;
+}
+
+/* Copy Button Styling */
 .copy-btn {
   position: absolute;
   top: 10px;
@@ -272,9 +372,10 @@ h3 {
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
+  z-index: 10;
 }
 
 .copy-btn:hover {
@@ -298,11 +399,11 @@ Bottom Navigation
 }
 
 .page.fold-next {
-  transform: rotateY(-180deg); /* Fold to the next page */
+  transform: rotateY(-180deg); /* Fold to the Next */
 }
 
 .page.fold-prev {
-  transform: rotateY(180deg); /* Fold to the previous page */
+  transform: rotateY(180deg); /* Fold to the previous */
 }
 
 .book-navigation {
@@ -312,22 +413,29 @@ Bottom Navigation
   margin-top: 20px;
 }
 
+/* Default styles for nav buttons and font */
 .book-navigation button {
-  padding: 10px 20px;
   font-size: 1rem;
-  background-color: #3498db;
-  color: white;
+  padding: 10px 16px;
+  margin: 10px;
   border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 6px;
+  background-color: #1a73e8;
+  color: white;
   display: flex;
   align-items: center;
-  gap: 8px; /* Space between text and icon */
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .book-navigation button:hover {
-  background-color: #2980b9;
+  background-color: #155ab6;
+}
+
+.book-navigation .icon {
+  width: 20px;
+  height: 20px;
 }
 
 .book-navigation .prev-page {
@@ -368,6 +476,7 @@ Bottom Navigation
 /********************************************
   Book Page Flip Animation
   *********************************************/
+
 /* Flip Forward (Next) */
 @keyframes flipForward {
   0% {

@@ -16,6 +16,16 @@
 </head>
 
 <body>
+   <!-- Theme Selector -->
+   <div class="theme-switcher">
+      <img src="../assets/icons/palette.svg" alt="Theme Switcher" id="theme-icon">
+      <select id="theme-selector">
+         <option value="tomorrow" selected>Tomorrow Night Blue</option>
+         <option value="light">Light</option>
+         <option value="dark">Dark</option>
+         <option value="slate">Slate</option>
+      </select>
+   </div>
    <div class="container">
       <!--Menu Icon -->
       <div class="menu-icon" onclick="toggleMenu()">
@@ -39,7 +49,7 @@
             <li><a href="../Maintaining_Access/">Maintaining Access</a></li>
             <li><a href="../Clearing_Tracks/">Clearing Tracks</a></li>
             <li><a href="../Analysis_Reporting/">Analysis and Reporting</a></li>
-            <li><a href="../AI_Tools/">Cyber security with AI & ML</a></li>
+            <li><a href="../AI_Tools/">Cyber security with AI</a></li>
             <li><a href="../Bug_Bounty_Hunting/">Bug Bounty Hunting</a></li>
             <li><a href="../Cryptography/">Cryptography</a></li>
             <li><a href="../CTFs/">Capture The Flag(CTF) Challenges</a></li>
@@ -483,7 +493,7 @@
                   <p>Use ZRAM (Compressed Swap in RAM)</p>
 
                   <div class="code-block">
-                     <pre><code>
+                     <pre><code class="language-bash">
                         $sudo apt install zram-tools -y
                         $sudo systemctl enable --now zramswap.service</code></pre>
                      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
@@ -1138,7 +1148,7 @@
                         <img src="../assets/icons/back-to-top.svg" alt="Top" class="icon">Top
                      </button>
                      <button class="next-page" data-next-page="../Reconnaissance/">
-                        Next Page <img src="../assets/icons/nextpage.ico" alt="Next" class="icon">
+                        Next <img src="../assets/icons/next_page.svg" alt="Next" class="icon">
                      </button>
                   </div>
                </div>
@@ -1205,6 +1215,43 @@
             });
          }
       </script>
+
+      <script>
+         const selector = document.getElementById('theme-selector');
+         const root = document.body;
+
+         const themes = {
+            tomorrow: 'theme-tomorrow',
+            light: 'theme-light',
+            dark: 'theme-dark',
+            slate: 'theme-slate'
+         };
+
+         function applyTheme(themeKey) {
+            const className = themes[themeKey];
+            if (className) {
+               root.className = className;
+               selector.value = themeKey;
+               localStorage.setItem('theme', themeKey);
+            }
+         }
+
+         // Apply saved theme or default
+         window.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('theme') || 'tomorrow';
+            applyTheme(saved);
+         });
+
+         selector.addEventListener('change', e => {
+            applyTheme(e.target.value);
+         });
+
+         // Toggle dropdown on icon click
+         document.getElementById('theme-icon').addEventListener('click', () => {
+            selector.style.display = selector.style.display === 'block' ? 'none' : 'block';
+         });
+      </script>
+
 
 
 

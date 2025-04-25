@@ -3,22 +3,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevButton = document.querySelector(".prev-page");
   const page = document.querySelector(".book-content");
 
-  // Handle Next Page Animation
+  // Handle Next Animation
   nextButton.addEventListener("click", () => {
-    const nextPageUrl = nextButton.getAttribute("data-next-page"); // Get the next page URL
+    const nextPageUrl = nextButton.getAttribute("data-next-page"); // Get the Next URL
     page.classList.add("fold-next");
     setTimeout(() => {
-      // Redirect to the next page after animation
+      // Redirect to the Next after animation
       window.location.href = nextPageUrl;
     }, 600); // Match the duration of the CSS transition
   });
 
-  // Handle Previous Page Animation
+  // Handle previous Animation
   prevButton.addEventListener("click", () => {
-    const prevPageUrl = prevButton.getAttribute("data-prev-page"); // Get the previous page URL
+    const prevPageUrl = prevButton.getAttribute("data-prev-page"); // Get the previous URL
     page.classList.add("fold-prev");
     setTimeout(() => {
-      // Redirect to the previous page after animation
+      // Redirect to the previous after animation
       window.location.href = prevPageUrl;
     }, 600); // Match the duration of the CSS transition
   });
