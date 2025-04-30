@@ -33,6 +33,20 @@ body {
   overflow: hidden;
 }
 
+h1 {
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  color: #2a7ae2;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .left-column {
   width: 25%;
   background-color: #2c3e50;
@@ -271,12 +285,6 @@ Theme Variables
   margin-bottom: 15px; /* Add spacing below the profile picture */
 }
 
-h1,
-h2,
-h3 {
-  color: #db1e5d;
-}
-
 .portfolio h1 {
   font-size: 1.5rem;
   margin: 10px 0;
@@ -366,6 +374,49 @@ h3 {
 .topics-list li a {
   color: #ffff;
   text-decoration: none;
+}
+
+.career-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.career-table th,
+.career-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.career-table th {
+  background-color: #34495e;
+  color: white;
+  font-size: 18px;
+}
+
+.career-table tr:hover {
+  background-color: #f0f8ff;
+}
+
+.career-table ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.career-table li {
+  margin-bottom: 6px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+.note {
+  color: red;
+  font-weight: bold;
 }
 
 /********************************
